@@ -1,0 +1,208 @@
+{
+  "_meta": {
+    "purpose": "Train protection-oriented watch agents to recognize vulnerable people/groups and exploitation-network patterns.",
+    "use": "Prevention, NGO triage, research, LE planning — NOT stalking, NOT targeting victims for harm.",
+    "never": "Do not use outputs to harass migrants, sex workers, or survivors. No sexual content involving minors."
+  },
+  "profiles": [
+    {
+      "id": "vuln_low_wealth_high_pull",
+      "label": "Low-wealth high-pull migrant",
+      "category": "vulnerable_person",
+      "priority": "high",
+      "description": "Person under economic pressure facing strong destination job pull — elevated labor exploitation risk.",
+      "features": {
+        "base_wealth_max": 1200,
+        "dest_jobs_min": 70,
+        "origin_jobs_max": 20,
+        "network_size_max": 2,
+        "border_friction_min": 0.45,
+        "risk_tolerance_min": 0.55
+      },
+      "weights": {
+        "wealth_low": 0.25,
+        "pull_high": 0.25,
+        "network_thin": 0.15,
+        "border_hard": 0.15,
+        "risk_high": 0.20
+      },
+      "alerts": ["labor_trafficking_risk", "debt_migration_risk"],
+      "response": "Offer legal migration info, debt-awareness, ethical recruiter checks."
+    },
+    {
+      "id": "vuln_isolated_female_coded",
+      "label": "Isolated traveler (gendered vulnerability proxy)",
+      "category": "vulnerable_person",
+      "priority": "high",
+      "description": "Thin network + high destination demand proxies — structural sex-trafficking victimization risk pattern (not an accusation).",
+      "features": {
+        "network_size_max": 1,
+        "base_wealth_max": 1800,
+        "dest_jobs_min": 60,
+        "risk_tolerance_min": 0.5,
+        "female_labor_gap_context_min": 0.4
+      },
+      "weights": {
+        "network_thin": 0.30,
+        "wealth_low": 0.20,
+        "pull_high": 0.20,
+        "isolation": 0.30
+      },
+      "alerts": ["sex_trafficking_risk", "isolation_risk"],
+      "response": "Victim-centered outreach; never criminalize; connect to specialized services."
+    },
+    {
+      "id": "vuln_child_protection",
+      "label": "Child / minor protection priority",
+      "category": "vulnerable_person",
+      "priority": "critical",
+      "description": "Age under 18 or child-coded records — ALWAYS route to child-protection channels.",
+      "features": {
+        "age_max": 17,
+        "unaccompanied": true
+      },
+      "weights": {
+        "minor": 1.0
+      },
+      "alerts": ["child_exploitation_risk", "child_protection"],
+      "response": "Immediate child-protection referral. Never publish identifying details of minors."
+    },
+    {
+      "id": "vuln_remittance_pressure",
+      "label": "Remittance-pressured household member",
+      "category": "vulnerable_person",
+      "priority": "medium",
+      "description": "High remittance dependency signals + migration intent — debt-bondage entry risk.",
+      "features": {
+        "remittance_dependency_min": 0.55,
+        "base_wealth_max": 2000,
+        "network_size_min": 1
+      },
+      "weights": {
+        "remit_pressure": 0.40,
+        "wealth_low": 0.25,
+        "network": 0.15,
+        "pull_high": 0.20
+      },
+      "alerts": ["debt_bondage_risk", "labor_trafficking_risk"],
+      "response": "Financial literacy + licensed recruitment only."
+    },
+    {
+      "id": "vuln_conflict_displaced",
+      "label": "Conflict-displaced person",
+      "category": "vulnerable_person",
+      "priority": "critical",
+      "description": "Origin/transit near high conflict_index — elevated multi-form exploitation risk.",
+      "features": {
+        "conflict_index_min": 0.55,
+        "base_wealth_max": 2500
+      },
+      "weights": {
+        "conflict": 0.45,
+        "governance_weak": 0.25,
+        "wealth_low": 0.15,
+        "border_hard": 0.15
+      },
+      "alerts": ["displacement_exploitation_risk", "sex_trafficking_risk", "labor_trafficking_risk"],
+      "response": "Humanitarian protection pathways; safe shelter; avoid informal brokers."
+    },
+    {
+      "id": "grp_recruitment_cluster",
+      "label": "Recruitment-linked cluster",
+      "category": "risk_group",
+      "priority": "high",
+      "description": "Multiple persons sharing origin + thin networks + same destination pull — possible broker funnel.",
+      "features": {
+        "cluster_size_min": 3,
+        "same_origin": true,
+        "network_size_max": 2,
+        "dest_jobs_min": 65
+      },
+      "weights": {
+        "cluster_size": 0.35,
+        "origin_match": 0.25,
+        "network_thin": 0.20,
+        "pull_high": 0.20
+      },
+      "alerts": ["recruitment_network_risk", "labor_trafficking_risk"],
+      "response": "Investigate placement fees/contracts; map shared recruiter references (LE/NGO)."
+    },
+    {
+      "id": "grp_border_transit_wave",
+      "label": "Border transit wave",
+      "category": "risk_group",
+      "priority": "high",
+      "description": "Group concentrated on known border/transit hubs with high opacity.",
+      "features": {
+        "cluster_size_min": 2,
+        "border_opacity_min": 0.55,
+        "role_any": ["transit", "border_hub", "landing"]
+      },
+      "weights": {
+        "hub_role": 0.35,
+        "opacity": 0.30,
+        "cluster_size": 0.20,
+        "conflict": 0.15
+      },
+      "alerts": ["transit_predation_risk", "smuggling_overlap"],
+      "response": "Increase protection presence at bottlenecks; document-theft awareness."
+    },
+    {
+      "id": "grp_digital_lure_cohort",
+      "label": "Digital job-lure cohort",
+      "category": "risk_group",
+      "priority": "high",
+      "description": "Shared high digital_recruitment exposure + overseas job intent patterns (scam compound / fake job risk).",
+      "features": {
+        "digital_recruitment_min": 0.6,
+        "dest_jobs_min": 55,
+        "cluster_size_min": 2
+      },
+      "weights": {
+        "digital": 0.40,
+        "pull_high": 0.25,
+        "cluster_size": 0.20,
+        "wealth_low": 0.15
+      },
+      "alerts": ["forced_scam_compound_risk", "digital_recruitment_risk"],
+      "response": "Platform reporting; verify employers; warn about passport confiscation."
+    },
+    {
+      "id": "net_recruiter_hub_pattern",
+      "label": "Recruiter-hub network pattern",
+      "category": "network_pattern",
+      "priority": "critical",
+      "description": "Location-level recruitment_network_density high + known involvement origin — structural network risk.",
+      "features": {
+        "recruitment_network_density_min": 0.7,
+        "known_involvement_any": ["confirmed_high", "elevated"]
+      },
+      "weights": {
+        "recruit_density": 0.50,
+        "known_tag": 0.30,
+        "governance_weak": 0.20
+      },
+      "alerts": ["organized_recruitment_risk", "sex_trafficking_risk", "labor_trafficking_risk"],
+      "response": "Strategic LE/NGO focus on hub disruption + survivor exit services."
+    },
+    {
+      "id": "net_demand_city_sink",
+      "label": "Demand-city sink pattern",
+      "category": "network_pattern",
+      "priority": "high",
+      "description": "Destination with high sex or labor demand proxies receiving multiple corridors.",
+      "features": {
+        "sex_industry_demand_min": 0.55,
+        "labor_demand_min": 0.55,
+        "role_any": ["destination", "hub"]
+      },
+      "weights": {
+        "sex_demand": 0.35,
+        "labor_demand": 0.35,
+        "hub_role": 0.30
+      },
+      "alerts": ["destination_exploitation_risk"],
+      "response": "Demand-side enforcement that protects victims; labor inspection; exit housing."
+    }
+  ]
+}

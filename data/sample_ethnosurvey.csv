@@ -1,0 +1,7 @@
+unique_id,first_name,last_name,dob,birth_location,base_wealth,risk_tolerance,network_size,origin_jobs,dest_jobs
+1,Jose,Rojas,1980-05-12,Zacatecas,1500,0.85,4,12,85
+2,Joseph,Rojas,1980-05-12,Zacatecas,1450,0.80,3,12,85
+3,Maria,Garcia,1992-11-24,Chihuahua,2200,0.55,1,18,70
+4,Jose,Rojas,1980-05-12,Zacatecas,1600,0.82,5,10,90
+5,Ana,Lopez,1988-03-01,Jalisco,980,0.70,2,8,75
+6,Carlos,Mendez,1975-09-15,Guanajuato,3100,0.40,0,22,60

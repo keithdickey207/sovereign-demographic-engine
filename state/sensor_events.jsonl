@@ -1,0 +1,6 @@
+{"kind": "wifi", "ts": "2026-07-10T04:36:44Z", "data": {"aps": [{"ssid": "SOVEREIGN-OPS", "signal": 88, "bssid": "11:22:33:44:55:01"}, {"ssid": "SOVEREIGN-WH", "signal": 62, "bssid": "11:22:33:44:55:02"}, {"ssid": "SOVEREIGN-LAB", "signal": 74, "bssid": "11:22:33:44:55:03"}, {"ssid": "Guest-Cafe", "signal": 41, "bssid": "aa:bb:cc:dd:ee:ff"}], "ts": 1783658204.1431422, "kind": "wifi"}}
+{"kind": "printer", "ts": "2026-07-10T04:36:44Z", "data": {"name": "OPS-MFP-01", "jobs": 2, "activity": 0.85, "ts": 1783658204.155582, "kind": "printer"}}
+{"kind": "motion", "ts": "2026-07-10T04:36:44Z", "data": {"sensor_id": "motion_gate", "active": true, "x": 5, "y": 95, "intensity": 1, "ts": 1783658204.1732557, "kind": "motion"}}
+{"kind": "wifi", "ts": "2026-07-10T04:37:08Z", "data": {"aps": [{"ssid": "SOVEREIGN-OPS", "signal": 88, "bssid": "11:22:33:44:55:01"}, {"ssid": "SOVEREIGN-WH", "signal": 62, "bssid": "11:22:33:44:55:02"}, {"ssid": "SOVEREIGN-LAB", "signal": 74, "bssid": "11:22:33:44:55:03"}], "ts": 1783658228.9793625, "kind": "wifi"}}
+{"kind": "printer", "ts": "2026-07-10T04:37:08Z", "data": {"name": "OPS-MFP-01", "jobs": 2, "activity": 0.85, "ts": 1783658228.9892662, "kind": "printer"}}
+{"kind": "wifi", "ts": "2026-07-10T04:37:14Z", "data": {"aps": [{"ssid": "TEST", "signal": 99, "bssid": "ff:ff:ff:ff:ff:ff"}], "ts": 1783658234.339217, "kind": "wifi"}}

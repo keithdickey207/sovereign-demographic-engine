@@ -1,0 +1,55 @@
+================================================================
+  SOVEREIGN DEMOGRAPHIC ENGINE — RESULTS
+================================================================
+
+  Sim time:     32.6s   tick=326   backend=local
+  Engine:       sovereign-spatial
+  Agents:       6/6 SETTLED
+  Origin wealth (Zacatecas remittances received):  $6,497.25
+  Pulses:       spawned=24  settled=24  active=0
+  Total remitted by agents:  $6,497.26
+
+  AGENTS (destination = El Paso lat 31.76 lon -106.49 when SETTLED)
+  ------------------------------------------------------------
+  Jose_Rojas
+    id=agent_8472  state=SETTLED  lat=31.7619 lon=-106.485
+    wealth left $602  sent home $898  yield 59.9%  pulses=4  gravity_p=0.9251
+
+  Joseph_Rojas
+    id=agent_cluster_2  state=SETTLED  lat=31.7619 lon=-106.485
+    wealth left $581  sent home $869  yield 59.9%  pulses=4  gravity_p=0.9222
+
+  Maria_Garcia
+    id=agent_cluster_3  state=SETTLED  lat=31.7619 lon=-106.485
+    wealth left $881  sent home $1,319  yield 60.0%  pulses=4  gravity_p=0.769
+
+  Jose_Rojas
+    id=agent_cluster_4  state=SETTLED  lat=31.7619 lon=-106.485
+    wealth left $640  sent home $960  yield 60.0%  pulses=4  gravity_p=0.945
+
+  Ana_Lopez
+    id=agent_cluster_5  state=SETTLED  lat=31.7619 lon=-106.485
+    wealth left $391  sent home $589  yield 60.1%  pulses=4  gravity_p=0.8835
+
+  Carlos_Mendez
+    id=agent_cluster_6  state=SETTLED  lat=31.7619 lon=-106.485
+    wealth left $1,237  sent home $1,863  yield 60.1%  pulses=4  gravity_p=0.6028
+
+  LEARNING (pattern memory)
+  ------------------------------------------------------------
+  episodes=96  buckets=5
+  remit_fraction=0.21000000000000005  migrate_threshold=0.55  risk_bias=-0.060000000000000046
+  gravity weights  α=1.7200000000000006  β=1.7760000000000031  γ=1.6160000000000023
+  avg yield=0.544400853422213  migrate_ok=0.953930201013048
+
+  FILES
+  ------------------------------------------------------------
+  /home/keithdickey207/projects/sovereign-demographic-engine/state/RESULTS.md
+  /home/keithdickey207/projects/sovereign-demographic-engine/state/spatial_frame.json
+  /home/keithdickey207/projects/sovereign-demographic-engine/state/pattern_memory.json
+  /home/keithdickey207/projects/sovereign-demographic-engine/STATUS.md
+
+================================================================
+  Story in one line:
+  6 people left origin → El Paso, sent $6,497 home; origin now holds $6,497.
+================================================================

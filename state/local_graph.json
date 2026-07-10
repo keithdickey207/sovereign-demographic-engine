@@ -1,0 +1,498 @@
+{
+  "nodes": {
+    "loc_mx_001": {
+      "labels": [
+        "Location"
+      ],
+      "id": "loc_mx_001",
+      "name": "Zacatecas_Municipality",
+      "jurisdiction": "Mexico",
+      "geo_lat": 22.7709,
+      "geo_lon": -102.5832,
+      "aggregate_wealth": 6497.25423517504,
+      "remittance_inflow": 6497.25423517504,
+      "remittance_events": 24
+    },
+    "loc_us_001": {
+      "labels": [
+        "Location"
+      ],
+      "id": "loc_us_001",
+      "name": "El_Paso_Hub",
+      "jurisdiction": "USA",
+      "geo_lat": 31.7619,
+      "geo_lon": -106.485,
+      "aggregate_wealth": 0.0,
+      "remittance_inflow": 0.0,
+      "remittance_events": 0
+    },
+    "agent_8472": {
+      "labels": [
+        "Person"
+      ],
+      "id": "agent_8472",
+      "name": "Jose_Rojas",
+      "base_wealth": 602.2038531839999,
+      "risk_tolerance": 0.85,
+      "network_size": 4,
+      "origin_jobs": 12.0,
+      "dest_jobs": 85.0,
+      "border_friction": 0.6,
+      "has_migrated": true,
+      "origin_location_id": "loc_mx_001",
+      "first_name": "Jose",
+      "last_name": "Rojas",
+      "dob": "1980-05-12",
+      "birth_location": "Zacatecas",
+      "cluster_id": "1",
+      "member_count": 1,
+      "migration_intent": true,
+      "total_remitted": 897.7961468160001
+    },
+    "corp_992": {
+      "labels": [
+        "Entity"
+      ],
+      "id": "corp_992",
+      "name": "Rojas_Logistics_LLC",
+      "sector": "Transport"
+    },
+    "agent_cluster_2": {
+      "labels": [
+        "Person"
+      ],
+      "id": "agent_cluster_2",
+      "name": "Joseph_Rojas",
+      "first_name": "Joseph",
+      "last_name": "Rojas",
+      "dob": "1980-05-12",
+      "birth_location": "Zacatecas",
+      "base_wealth": 581.3990718239997,
+      "risk_tolerance": 0.8,
+      "network_size": 3,
+      "origin_jobs": 12.0,
+      "dest_jobs": 85.0,
+      "border_friction": 0.6,
+      "cluster_id": "2",
+      "has_migrated": true,
+      "member_count": 1,
+      "migration_intent": true,
+      "total_remitted": 868.6009281760001,
+      "origin_location_id": "loc_mx_001"
+    },
+    "agent_cluster_3": {
+      "labels": [
+        "Person"
+      ],
+      "id": "agent_cluster_3",
+      "name": "Maria_Garcia",
+      "first_name": "Maria",
+      "last_name": "Garcia",
+      "dob": "1992-11-24",
+      "birth_location": "Chihuahua",
+      "base_wealth": 881.0131413247998,
+      "risk_tolerance": 0.55,
+      "network_size": 1,
+      "origin_jobs": 18.0,
+      "dest_jobs": 70.0,
+      "border_friction": 0.6,
+      "cluster_id": "3",
+      "has_migrated": true,
+      "member_count": 1,
+      "migration_intent": true,
+      "total_remitted": 1318.9868586752002,
+      "origin_location_id": "loc_mx_001"
+    },
+    "agent_cluster_4": {
+      "labels": [
+        "Person"
+      ],
+      "id": "agent_cluster_4",
+      "name": "Jose_Rojas",
+      "first_name": "Jose",
+      "last_name": "Rojas",
+      "dob": "1980-05-12",
+      "birth_location": "Zacatecas",
+      "base_wealth": 639.9298567167999,
+      "risk_tolerance": 0.82,
+      "network_size": 5,
+      "origin_jobs": 10.0,
+      "dest_jobs": 90.0,
+      "border_friction": 0.6,
+      "cluster_id": "4",
+      "has_migrated": true,
+      "member_count": 1,
+      "migration_intent": true,
+      "total_remitted": 960.0701432832001,
+      "origin_location_id": "loc_mx_001"
+    },
+    "agent_cluster_5": {
+      "labels": [
+        "Person"
+      ],
+      "id": "agent_cluster_5",
+      "name": "Ana_Lopez",
+      "first_name": "Ana",
+      "last_name": "Lopez",
+      "dob": "1988-03-01",
+      "birth_location": "Jalisco",
+      "base_wealth": 391.4627660697599,
+      "risk_tolerance": 0.7,
+      "network_size": 2,
+      "origin_jobs": 8.0,
+      "dest_jobs": 75.0,
+      "border_friction": 0.6,
+      "cluster_id": "5",
+      "has_migrated": true,
+      "member_count": 1,
+      "migration_intent": true,
+      "total_remitted": 588.5372339302401,
+      "origin_location_id": "loc_mx_001"
+    },
+    "agent_cluster_6": {
+      "labels": [
+        "Person"
+      ],
+      "id": "agent_cluster_6",
+      "name": "Carlos_Mendez",
+      "first_name": "Carlos",
+      "last_name": "Mendez",
+      "dob": "1975-09-15",
+      "birth_location": "Guanajuato",
+      "base_wealth": 1236.7370757055996,
+      "risk_tolerance": 0.4,
+      "network_size": 0,
+      "origin_jobs": 22.0,
+      "dest_jobs": 60.0,
+      "border_friction": 0.6,
+      "cluster_id": "6",
+      "has_migrated": true,
+      "member_count": 1,
+      "migration_intent": true,
+      "total_remitted": 1863.2629242944004,
+      "origin_location_id": "loc_mx_001"
+    }
+  },
+  "edges": [
+    {
+      "type": "ORIGINATES_FROM",
+      "from": "agent_8472",
+      "to": "loc_mx_001",
+      "props": {}
+    },
+    {
+      "type": "BENEFICIAL_OWNER",
+      "from": "agent_8472",
+      "to": "corp_992",
+      "props": {
+        "stake": 1.0,
+        "year_established": 2024
+      }
+    },
+    {
+      "type": "OPERATES_IN",
+      "from": "corp_992",
+      "to": "loc_us_001",
+      "props": {}
+    },
+    {
+      "type": "TRANSFERRED_CAPITAL",
+      "from": "agent_8472",
+      "to": "loc_mx_001",
+      "props": {
+        "amount": 25000,
+        "type": "Remittance",
+        "currency": "USD",
+        "year": 2024
+      }
+    },
+    {
+      "type": "TRANSFERRED_CAPITAL",
+      "from": "agent_8472",
+      "to": "loc_mx_001",
+      "props": {
+        "amount": 306.00000000000006,
+        "type": "Remittance",
+        "currency": "USD",
+        "year": 2026,
+        "ts": "2026-07-10T05:18:45Z"
+      }
+    },
+    {
+      "type": "TRANSFERRED_CAPITAL",
+      "from": "agent_cluster_2",
+      "to": "loc_mx_001",
+      "props": {
+        "amount": 295.80000000000007,
+        "type": "Remittance",
+        "currency": "USD",
+        "year": 2026,
+        "ts": "2026-07-10T05:18:45Z"
+      }
+    },
+    {
+      "type": "TRANSFERRED_CAPITAL",
+      "from": "agent_cluster_3",
+      "to": "loc_mx_001",
+      "props": {
+        "amount": 448.80000000000007,
+        "type": "Remittance",
+        "currency": "USD",
+        "year": 2026,
+        "ts": "2026-07-10T05:18:45Z"
+      }
+    },
+    {
+      "type": "TRANSFERRED_CAPITAL",
+      "from": "agent_cluster_4",
+      "to": "loc_mx_001",
+      "props": {
+        "amount": 326.4000000000001,
+        "type": "Remittance",
+        "currency": "USD",
+        "year": 2026,
+        "ts": "2026-07-10T05:18:45Z"
+      }
+    },
+    {
+      "type": "TRANSFERRED_CAPITAL",
+      "from": "agent_cluster_5",
+      "to": "loc_mx_001",
+      "props": {
+        "amount": 199.92000000000004,
+        "type": "Remittance",
+        "currency": "USD",
+        "year": 2026,
+        "ts": "2026-07-10T05:18:45Z"
+      }
+    },
+    {
+      "type": "TRANSFERRED_CAPITAL",
+      "from": "agent_cluster_6",
+      "to": "loc_mx_001",
+      "props": {
+        "amount": 632.4000000000001,
+        "type": "Remittance",
+        "currency": "USD",
+        "year": 2026,
+        "ts": "2026-07-10T05:18:45Z"
+      }
+    },
+    {
+      "type": "TRANSFERRED_CAPITAL",
+      "from": "agent_8472",
+      "to": "loc_mx_001",
+      "props": {
+        "amount": 243.57600000000005,
+        "type": "Remittance",
+        "currency": "USD",
+        "year": 2026,
+        "ts": "2026-07-10T05:18:47Z"
+      }
+    },
+    {
+      "type": "TRANSFERRED_CAPITAL",
+      "from": "agent_cluster_2",
+      "to": "loc_mx_001",
+      "props": {
+        "amount": 235.45680000000002,
+        "type": "Remittance",
+        "currency": "USD",
+        "year": 2026,
+        "ts": "2026-07-10T05:18:47Z"
+      }
+    },
+    {
+      "type": "TRANSFERRED_CAPITAL",
+      "from": "agent_cluster_3",
+      "to": "loc_mx_001",
+      "props": {
+        "amount": 357.24480000000005,
+        "type": "Remittance",
+        "currency": "USD",
+        "year": 2026,
+        "ts": "2026-07-10T05:18:47Z"
+      }
+    },
+    {
+      "type": "TRANSFERRED_CAPITAL",
+      "from": "agent_cluster_4",
+      "to": "loc_mx_001",
+      "props": {
+        "amount": 259.81440000000003,
+        "type": "Remittance",
+        "currency": "USD",
+        "year": 2026,
+        "ts": "2026-07-10T05:18:47Z"
+      }
+    },
+    {
+      "type": "TRANSFERRED_CAPITAL",
+      "from": "agent_cluster_5",
+      "to": "loc_mx_001",
+      "props": {
+        "amount": 159.13632,
+        "type": "Remittance",
+        "currency": "USD",
+        "year": 2026,
+        "ts": "2026-07-10T05:18:47Z"
+      }
+    },
+    {
+      "type": "TRANSFERRED_CAPITAL",
+      "from": "agent_cluster_6",
+      "to": "loc_mx_001",
+      "props": {
+        "amount": 503.3904000000001,
+        "type": "Remittance",
+        "currency": "USD",
+        "year": 2026,
+        "ts": "2026-07-10T05:18:47Z"
+      }
+    },
+    {
+      "type": "TRANSFERRED_CAPITAL",
+      "from": "agent_8472",
+      "to": "loc_mx_001",
+      "props": {
+        "amount": 193.88649600000002,
+        "type": "Remittance",
+        "currency": "USD",
+        "year": 2026,
+        "ts": "2026-07-10T05:18:50Z"
+      }
+    },
+    {
+      "type": "TRANSFERRED_CAPITAL",
+      "from": "agent_cluster_2",
+      "to": "loc_mx_001",
+      "props": {
+        "amount": 187.4236128,
+        "type": "Remittance",
+        "currency": "USD",
+        "year": 2026,
+        "ts": "2026-07-10T05:18:50Z"
+      }
+    },
+    {
+      "type": "TRANSFERRED_CAPITAL",
+      "from": "agent_cluster_3",
+      "to": "loc_mx_001",
+      "props": {
+        "amount": 284.36686080000004,
+        "type": "Remittance",
+        "currency": "USD",
+        "year": 2026,
+        "ts": "2026-07-10T05:18:50Z"
+      }
+    },
+    {
+      "type": "TRANSFERRED_CAPITAL",
+      "from": "agent_cluster_4",
+      "to": "loc_mx_001",
+      "props": {
+        "amount": 206.81226240000004,
+        "type": "Remittance",
+        "currency": "USD",
+        "year": 2026,
+        "ts": "2026-07-10T05:18:50Z"
+      }
+    },
+    {
+      "type": "TRANSFERRED_CAPITAL",
+      "from": "agent_cluster_5",
+      "to": "loc_mx_001",
+      "props": {
+        "amount": 126.67251071999999,
+        "type": "Remittance",
+        "currency": "USD",
+        "year": 2026,
+        "ts": "2026-07-10T05:18:50Z"
+      }
+    },
+    {
+      "type": "TRANSFERRED_CAPITAL",
+      "from": "agent_cluster_6",
+      "to": "loc_mx_001",
+      "props": {
+        "amount": 400.69875840000003,
+        "type": "Remittance",
+        "currency": "USD",
+        "year": 2026,
+        "ts": "2026-07-10T05:18:50Z"
+      }
+    },
+    {
+      "type": "TRANSFERRED_CAPITAL",
+      "from": "agent_8472",
+      "to": "loc_mx_001",
+      "props": {
+        "amount": 154.33365081600002,
+        "type": "Remittance",
+        "currency": "USD",
+        "year": 2026,
+        "ts": "2026-07-10T05:18:52Z"
+      }
+    },
+    {
+      "type": "TRANSFERRED_CAPITAL",
+      "from": "agent_cluster_2",
+      "to": "loc_mx_001",
+      "props": {
+        "amount": 149.920515376,
+        "type": "Remittance",
+        "currency": "USD",
+        "year": 2026,
+        "ts": "2026-07-10T05:18:52Z"
+      }
+    },
+    {
+      "type": "TRANSFERRED_CAPITAL",
+      "from": "agent_cluster_3",
+      "to": "loc_mx_001",
+      "props": {
+        "amount": 228.57519787520002,
+        "type": "Remittance",
+        "currency": "USD",
+        "year": 2026,
+        "ts": "2026-07-10T05:18:52Z"
+      }
+    },
+    {
+      "type": "TRANSFERRED_CAPITAL",
+      "from": "agent_cluster_4",
+      "to": "loc_mx_001",
+      "props": {
+        "amount": 167.04348088320003,
+        "type": "Remittance",
+        "currency": "USD",
+        "year": 2026,
+        "ts": "2026-07-10T05:18:52Z"
+      }
+    },
+    {
+      "type": "TRANSFERRED_CAPITAL",
+      "from": "agent_cluster_5",
+      "to": "loc_mx_001",
+      "props": {
+        "amount": 102.80840321024,
+        "type": "Remittance",
+        "currency": "USD",
+        "year": 2026,
+        "ts": "2026-07-10T05:18:52Z"
+      }
+    },
+    {
+      "type": "TRANSFERRED_CAPITAL",
+      "from": "agent_cluster_6",
+      "to": "loc_mx_001",
+      "props": {
+        "amount": 326.7737658944,
+        "type": "Remittance",
+        "currency": "USD",
+        "year": 2026,
+        "ts": "2026-07-10T05:18:52Z"
+      }
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "_meta": {
+    "purpose": "Building footprints for God Mode area tracking",
+    "units": "meters local ENU relative to origin",
+    "origin_latlon": [31.7619, -106.485]
+  },
+  "origin": {
+    "name": "El Paso Hub Area",
+    "lat": 31.7619,
+    "lon": -106.485,
+    "alt_m": 1140
+  },
+  "buildings": [
+    {
+      "id": "bldg_ops_01",
+      "name": "Operations Center",
+      "type": "office",
+      "height_m": 18,
+      "floors": 4,
+      "polygon": [[-40, -30], [40, -30], [40, 30], [-40, 30]],
+      "sensors": ["wifi_ap", "motion", "printer"]
+    },
+    {
+      "id": "bldg_wh_02",
+      "name": "Warehouse North",
+      "type": "warehouse",
+      "height_m": 12,
+      "floors": 1,
+      "polygon": [[60, -20], [140, -20], [140, 50], [60, 50]],
+      "sensors": ["wifi_ap", "motion"]
+    },
+    {
+      "id": "bldg_gate_03",
+      "name": "Gate House",
+      "type": "security",
+      "height_m": 6,
+      "floors": 1,
+      "polygon": [[-10, 80], [20, 80], [20, 110], [-10, 110]],
+      "sensors": ["motion", "camera"]
+    },
+    {
+      "id": "bldg_lab_04",
+      "name": "Sensor Lab",
+      "type": "lab",
+      "height_m": 10,
+      "floors": 2,
+      "polygon": [[-120, -40], [-70, -40], [-70, 10], [-120, 10]],
+      "sensors": ["wifi_ap", "printer", "motion", "rf"]
+    },
+    {
+      "id": "bldg_dorm_05",
+      "name": "Annex Residences",
+      "type": "residential",
+      "height_m": 14,
+      "floors": 3,
+      "polygon": [[-90, 60], [-30, 60], [-30, 120], [-90, 120]],
+      "sensors": ["wifi_ap", "motion"]
+    }
+  ],
+  "zones": [
+    {
+      "id": "zone_courtyard",
+      "name": "Central Courtyard",
+      "polygon": [[-30, 30], [50, 30], [50, 75], [-30, 75]],
+      "kind": "open"
+    },
+    {
+      "id": "zone_parking",
+      "name": "South Parking",
+      "polygon": [[-40, -80], [80, -80], [80, -35], [-40, -35]],
+      "kind": "parking"
+    }
+  ],
+  "fixed_sensors": [
+    {"id": "wifi_ap_ops", "kind": "wifi_ap", "building": "bldg_ops_01", "x": 0, "y": 0, "z": 8, "ssid_hint": "SOVEREIGN-OPS"},
+    {"id": "wifi_ap_wh", "kind": "wifi_ap", "building": "bldg_wh_02", "x": 100, "y": 15, "z": 6, "ssid_hint": "SOVEREIGN-WH"},
+    {"id": "wifi_ap_lab", "kind": "wifi_ap", "building": "bldg_lab_04", "x": -95, "y": -15, "z": 5, "ssid_hint": "SOVEREIGN-LAB"},
+    {"id": "wifi_ap_dorm", "kind": "wifi_ap", "building": "bldg_dorm_05", "x": -60, "y": 90, "z": 7, "ssid_hint": "SOVEREIGN-ANX"},
+    {"id": "printer_ops", "kind": "printer", "building": "bldg_ops_01", "x": 15, "y": 10, "z": 1.1, "name": "OPS-MFP-01"},
+    {"id": "printer_lab", "kind": "printer", "building": "bldg_lab_04", "x": -85, "y": -20, "z": 1.1, "name": "LAB-PRT-02"},
+    {"id": "motion_gate", "kind": "motion", "building": "bldg_gate_03", "x": 5, "y": 95, "z": 2.5, "name": "GATE-PIR"},
+    {"id": "motion_court", "kind": "motion", "building": null, "x": 10, "y": 50, "z": 3, "name": "COURT-PIR"},
+    {"id": "rf_lab", "kind": "rf_sniffer", "building": "bldg_lab_04", "x": -100, "y": -5, "z": 2, "name": "LAB-RF-1"}
+  ]
+}

@@ -1,0 +1,8 @@
+# Local-first demographic simulation stack
+# Pin Splink 3.9.x — DuckDBLinker API matches the resolution layer
+splink==3.9.15
+sqlglot>=18.0.0,<25.0.0
+pandas>=2.0
+duckdb>=0.9
+neo4j>=5.14
+requests>=2.31

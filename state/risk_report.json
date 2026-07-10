@@ -1,0 +1,547 @@
+{
+  "ok": true,
+  "mode": "hotspots",
+  "kind": "all",
+  "count": 20,
+  "hotspots": [
+    {
+      "rank": 1,
+      "id": "loc_mm_myawaddy",
+      "name": "Myawaddy (border)",
+      "country": "Myanmar",
+      "region": "Southeast Asia",
+      "lat": 16.6891,
+      "lon": 98.5089,
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "labor_trafficking",
+        "forced_scam_compound",
+        "sex_trafficking"
+      ],
+      "source_tags": [
+        "TIP_myanmar",
+        "UNODC_scam_compounds"
+      ],
+      "metric": 78.9,
+      "overall_0_100": 78.9,
+      "sex_trafficking_risk_0_100": 75.2,
+      "labor_trafficking_risk_0_100": 73.9,
+      "child_exploitation_risk_0_100": 76.2,
+      "level": "CRITICAL",
+      "corridor_count": 1,
+      "top_corridor": "SE Asia forced scam compound corridor",
+      "notes": "Conflict border zone; scam compounds and cross-border trafficking risk."
+    },
+    {
+      "rank": 2,
+      "id": "loc_ly_tripoli",
+      "name": "Tripoli",
+      "country": "Libya",
+      "region": "North Africa",
+      "lat": 32.8872,
+      "lon": 13.1913,
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "labor_trafficking",
+        "sex_trafficking",
+        "detention_abuse"
+      ],
+      "source_tags": [
+        "TIP_libya",
+        "UNODC_mediterranean"
+      ],
+      "metric": 78.1,
+      "overall_0_100": 78.1,
+      "sex_trafficking_risk_0_100": 72.8,
+      "labor_trafficking_risk_0_100": 69.5,
+      "child_exploitation_risk_0_100": 72.6,
+      "level": "CRITICAL",
+      "corridor_count": 2,
+      "top_corridor": "Benin City \u2192 Mediterranean Europe",
+      "notes": "High conflict + opacity transit; severe exploitation risk."
+    },
+    {
+      "rank": 3,
+      "id": "loc_ng_benin_city",
+      "name": "Benin City",
+      "country": "Nigeria",
+      "region": "West Africa",
+      "lat": 6.335,
+      "lon": 5.6037,
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking"
+      ],
+      "source_tags": [
+        "TIP_nigeria",
+        "UNODC_europe_africa"
+      ],
+      "metric": 75.5,
+      "overall_0_100": 75.5,
+      "sex_trafficking_risk_0_100": 70.0,
+      "labor_trafficking_risk_0_100": 64.4,
+      "child_exploitation_risk_0_100": 61.5,
+      "level": "CRITICAL",
+      "corridor_count": 1,
+      "top_corridor": "Benin City \u2192 Mediterranean Europe",
+      "notes": "Documented major origin for sex trafficking toward Europe."
+    },
+    {
+      "rank": 4,
+      "id": "loc_ng_lagos",
+      "name": "Lagos",
+      "country": "Nigeria",
+      "region": "West Africa",
+      "lat": 6.5244,
+      "lon": 3.3792,
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking",
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "TIP_nigeria"
+      ],
+      "metric": 74.6,
+      "overall_0_100": 74.6,
+      "sex_trafficking_risk_0_100": 69.3,
+      "labor_trafficking_risk_0_100": 75.4,
+      "child_exploitation_risk_0_100": 59.2,
+      "level": "HIGH",
+      "corridor_count": 2,
+      "top_corridor": "West Africa \u2192 Mediterranean Europe",
+      "notes": "Major West African origin/hub; recruitment density elevated."
+    },
+    {
+      "rank": 5,
+      "id": "loc_mx_tenancingo",
+      "name": "Tenancingo (Tlaxcala)",
+      "country": "Mexico",
+      "region": "Latin America",
+      "lat": 19.3372,
+      "lon": -98.2025,
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking"
+      ],
+      "source_tags": [
+        "TIP_mexico",
+        "open_source_reporting"
+      ],
+      "metric": 71.5,
+      "overall_0_100": 71.5,
+      "sex_trafficking_risk_0_100": 68.6,
+      "labor_trafficking_risk_0_100": 58.7,
+      "child_exploitation_risk_0_100": 57.8,
+      "level": "HIGH",
+      "corridor_count": 1,
+      "top_corridor": "Tlaxcala/Tenancingo recruitment \u2192 US demand cities",
+      "notes": "Widely cited origin/recruitment area for sex trafficking networks toward US."
+    },
+    {
+      "rank": 6,
+      "id": "loc_mx_juarez",
+      "name": "Ciudad Ju\u00e1rez",
+      "country": "Mexico",
+      "region": "Latin America",
+      "lat": 31.6904,
+      "lon": -106.4245,
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking",
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "TIP_mexico",
+        "border_reporting"
+      ],
+      "metric": 70.9,
+      "overall_0_100": 70.9,
+      "sex_trafficking_risk_0_100": 70.4,
+      "labor_trafficking_risk_0_100": 65.4,
+      "child_exploitation_risk_0_100": 58.8,
+      "level": "HIGH",
+      "corridor_count": 2,
+      "top_corridor": "Tlaxcala/Tenancingo recruitment \u2192 US demand cities",
+      "notes": "Sister city to El Paso; elevated border exploitation risk."
+    },
+    {
+      "rank": 7,
+      "id": "loc_mx_tapachula",
+      "name": "Tapachula",
+      "country": "Mexico",
+      "region": "Latin America",
+      "lat": 14.9056,
+      "lon": -92.2634,
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking",
+        "labor_trafficking",
+        "child_exploitation"
+      ],
+      "source_tags": [
+        "IOM_central_america",
+        "TIP_mexico"
+      ],
+      "metric": 70.8,
+      "overall_0_100": 70.8,
+      "sex_trafficking_risk_0_100": 67.7,
+      "labor_trafficking_risk_0_100": 67.5,
+      "child_exploitation_risk_0_100": 70.8,
+      "level": "HIGH",
+      "corridor_count": 1,
+      "top_corridor": "Tapachula bottleneck \u2192 US border",
+      "notes": "Southern Mexico migrant bottleneck; high transit exploitation risk."
+    },
+    {
+      "rank": 8,
+      "id": "loc_mx_tijuana",
+      "name": "Tijuana",
+      "country": "Mexico",
+      "region": "Latin America",
+      "lat": 32.5149,
+      "lon": -117.0382,
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking",
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "TIP_mexico",
+        "border_reporting"
+      ],
+      "metric": 70.6,
+      "overall_0_100": 70.6,
+      "sex_trafficking_risk_0_100": 71.4,
+      "labor_trafficking_risk_0_100": 63.8,
+      "child_exploitation_risk_0_100": 55.7,
+      "level": "HIGH",
+      "corridor_count": 1,
+      "top_corridor": "Tijuana border complex \u2194 US",
+      "notes": "Major US-MX border hub; commercial sex + smuggling overlap risk."
+    },
+    {
+      "rank": 9,
+      "id": "loc_gt_guatemala_city",
+      "name": "Guatemala City",
+      "country": "Guatemala",
+      "region": "Latin America",
+      "lat": 14.6349,
+      "lon": -90.5069,
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking",
+        "labor_trafficking",
+        "child_exploitation"
+      ],
+      "source_tags": [
+        "TIP_guatemala"
+      ],
+      "metric": 70.5,
+      "overall_0_100": 70.5,
+      "sex_trafficking_risk_0_100": 63.7,
+      "labor_trafficking_risk_0_100": 70.8,
+      "child_exploitation_risk_0_100": 66.9,
+      "level": "HIGH",
+      "corridor_count": 2,
+      "top_corridor": "Guatemala \u2192 US border hubs",
+      "notes": "Strong northbound migration push; high remittance dependency."
+    },
+    {
+      "rank": 10,
+      "id": "loc_in_kolkata",
+      "name": "Kolkata",
+      "country": "India",
+      "region": "South Asia",
+      "lat": 22.5726,
+      "lon": 88.3639,
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking",
+        "child_exploitation",
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "TIP_india",
+        "south_asia_reporting"
+      ],
+      "metric": 69.4,
+      "overall_0_100": 69.4,
+      "sex_trafficking_risk_0_100": 71.8,
+      "labor_trafficking_risk_0_100": 65.4,
+      "child_exploitation_risk_0_100": 60.6,
+      "level": "HIGH",
+      "corridor_count": 0,
+      "top_corridor": null,
+      "notes": "Major internal trafficking destination/transit patterns reported."
+    },
+    {
+      "rank": 11,
+      "id": "loc_mm_yangon",
+      "name": "Yangon",
+      "country": "Myanmar",
+      "region": "Southeast Asia",
+      "lat": 16.8661,
+      "lon": 96.1951,
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "labor_trafficking",
+        "sex_trafficking"
+      ],
+      "source_tags": [
+        "TIP_myanmar"
+      ],
+      "metric": 69.2,
+      "overall_0_100": 69.2,
+      "sex_trafficking_risk_0_100": 63.4,
+      "labor_trafficking_risk_0_100": 67.6,
+      "child_exploitation_risk_0_100": 65.1,
+      "level": "HIGH",
+      "corridor_count": 2,
+      "top_corridor": "Myanmar \u2192 Thailand hubs",
+      "notes": "Conflict displacement elevates trafficking vulnerability."
+    },
+    {
+      "rank": 12,
+      "id": "loc_kh_sihanoukville",
+      "name": "Sihanoukville",
+      "country": "Cambodia",
+      "region": "Southeast Asia",
+      "lat": 10.627,
+      "lon": 103.522,
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "labor_trafficking",
+        "forced_scam_compound"
+      ],
+      "source_tags": [
+        "TIP_cambodia",
+        "UNODC_scam_compounds",
+        "open_source_reporting"
+      ],
+      "metric": 67.7,
+      "overall_0_100": 67.7,
+      "sex_trafficking_risk_0_100": 57.8,
+      "labor_trafficking_risk_0_100": 65.0,
+      "child_exploitation_risk_0_100": 54.5,
+      "level": "HIGH",
+      "corridor_count": 1,
+      "top_corridor": "SE Asia forced scam compound corridor",
+      "notes": "Public reporting on scam-compound forced labor / trafficking."
+    },
+    {
+      "rank": 13,
+      "id": "loc_al_tirana",
+      "name": "Tirana",
+      "country": "Albania",
+      "region": "Eastern Europe",
+      "lat": 41.3275,
+      "lon": 19.8187,
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking",
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "TIP_albania",
+        "EU_reporting"
+      ],
+      "metric": 64.6,
+      "overall_0_100": 64.6,
+      "sex_trafficking_risk_0_100": 60.6,
+      "labor_trafficking_risk_0_100": 62.7,
+      "child_exploitation_risk_0_100": 46.2,
+      "level": "HIGH",
+      "corridor_count": 1,
+      "top_corridor": "Albania \u2192 EU demand markets",
+      "notes": "Long-documented SE Europe origin corridor into EU demand markets."
+    },
+    {
+      "rank": 14,
+      "id": "loc_ua_odesa",
+      "name": "Odesa",
+      "country": "Ukraine",
+      "region": "Eastern Europe",
+      "lat": 46.4825,
+      "lon": 30.7233,
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking",
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "TIP_conflict"
+      ],
+      "metric": 64.1,
+      "overall_0_100": 64.1,
+      "sex_trafficking_risk_0_100": 60.6,
+      "labor_trafficking_risk_0_100": 59.8,
+      "child_exploitation_risk_0_100": 61.5,
+      "level": "HIGH",
+      "corridor_count": 1,
+      "top_corridor": "Ukraine displacement \u2192 EU hubs",
+      "notes": "Conflict displacement sharply elevates exploitation risk."
+    },
+    {
+      "rank": 15,
+      "id": "loc_in_mumbai",
+      "name": "Mumbai",
+      "country": "India",
+      "region": "South Asia",
+      "lat": 19.076,
+      "lon": 72.8777,
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking",
+        "labor_trafficking",
+        "child_exploitation"
+      ],
+      "source_tags": [
+        "TIP_india"
+      ],
+      "metric": 63.9,
+      "overall_0_100": 63.9,
+      "sex_trafficking_risk_0_100": 65.6,
+      "labor_trafficking_risk_0_100": 64.0,
+      "child_exploitation_risk_0_100": 56.7,
+      "level": "HIGH",
+      "corridor_count": 1,
+      "top_corridor": "Internal South Asia \u2192 Mumbai",
+      "notes": "Megacity pull; internal + cross-border exploitation risk."
+    },
+    {
+      "rank": 16,
+      "id": "loc_th_bangkok",
+      "name": "Bangkok",
+      "country": "Thailand",
+      "region": "Southeast Asia",
+      "lat": 13.7563,
+      "lon": 100.5018,
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking",
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "TIP_thailand"
+      ],
+      "metric": 61.9,
+      "overall_0_100": 61.9,
+      "sex_trafficking_risk_0_100": 64.4,
+      "labor_trafficking_risk_0_100": 54.4,
+      "child_exploitation_risk_0_100": 40.6,
+      "level": "HIGH",
+      "corridor_count": 3,
+      "top_corridor": "SE Asia forced scam compound corridor",
+      "notes": "Tourism + commercial-sex demand proxies historically elevated."
+    },
+    {
+      "rank": 17,
+      "id": "loc_ro_bucharest",
+      "name": "Bucharest",
+      "country": "Romania",
+      "region": "Eastern Europe",
+      "lat": 44.4268,
+      "lon": 26.1025,
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking",
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "TIP_romania",
+        "EU_reporting"
+      ],
+      "metric": 60.0,
+      "overall_0_100": 60.0,
+      "sex_trafficking_risk_0_100": 58.7,
+      "labor_trafficking_risk_0_100": 56.6,
+      "child_exploitation_risk_0_100": 39.9,
+      "level": "HIGH",
+      "corridor_count": 1,
+      "top_corridor": "Romania \u2192 Western EU sex/labor markets",
+      "notes": "EU-documented origin/transit for sex and labor trafficking into Western Europe."
+    },
+    {
+      "rank": 18,
+      "id": "loc_th_pattaya",
+      "name": "Pattaya",
+      "country": "Thailand",
+      "region": "Southeast Asia",
+      "lat": 12.9236,
+      "lon": 100.8825,
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking",
+        "child_exploitation"
+      ],
+      "source_tags": [
+        "TIP_thailand",
+        "tourism_reporting"
+      ],
+      "metric": 57.7,
+      "overall_0_100": 57.7,
+      "sex_trafficking_risk_0_100": 67.8,
+      "labor_trafficking_risk_0_100": 37.0,
+      "child_exploitation_risk_0_100": 50.9,
+      "level": "ELEVATED",
+      "corridor_count": 0,
+      "top_corridor": null,
+      "notes": "Tourism-linked commercial sex demand hub; high sex trafficking risk proxy."
+    },
+    {
+      "rank": 19,
+      "id": "loc_us_houston",
+      "name": "Houston",
+      "country": "USA",
+      "region": "North America",
+      "lat": 29.7604,
+      "lon": -95.3698,
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking",
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "TIP_usa",
+        "US_city_taskforces"
+      ],
+      "metric": 52.7,
+      "overall_0_100": 52.7,
+      "sex_trafficking_risk_0_100": 56.2,
+      "labor_trafficking_risk_0_100": 50.6,
+      "child_exploitation_risk_0_100": 31.2,
+      "level": "ELEVATED",
+      "corridor_count": 2,
+      "top_corridor": "Tlaxcala/Tenancingo recruitment \u2192 US demand cities",
+      "notes": "Major US metro with active anti-trafficking task forces; high case volume reported."
+    },
+    {
+      "rank": 20,
+      "id": "loc_us_atlanta",
+      "name": "Atlanta",
+      "country": "USA",
+      "region": "North America",
+      "lat": 33.749,
+      "lon": -84.388,
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking"
+      ],
+      "source_tags": [
+        "TIP_usa",
+        "US_city_taskforces"
+      ],
+      "metric": 51.7,
+      "overall_0_100": 51.7,
+      "sex_trafficking_risk_0_100": 57.4,
+      "labor_trafficking_risk_0_100": 37.4,
+      "child_exploitation_risk_0_100": 30.9,
+      "level": "ELEVATED",
+      "corridor_count": 1,
+      "top_corridor": "Tlaxcala/Tenancingo recruitment \u2192 US demand cities",
+      "notes": "Airport hub + demand market; frequently cited in US sex trafficking cases."
+    }
+  ],
+  "disclaimer": "STRUCTURAL RISK MODEL for prevention and research only. Scores are heuristic composites from seed indicators \u2014 not legal findings, not confirmation of trafficking, and not a targeting tool against individuals. Do not use to harass migrants or sex workers. Validate with official sources (national TIP reports, UNODC, IOM, police). For emergencies use local law enforcement / trafficking hotlines."
+}

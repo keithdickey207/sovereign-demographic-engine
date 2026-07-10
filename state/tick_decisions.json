@@ -1,0 +1,171 @@
+{
+  "tick": 1,
+  "backend": "local",
+  "model": "llama3.2",
+  "learning": {
+    "policy": {
+      "migrate_threshold": 0.55,
+      "transfer_threshold": 0.5,
+      "remittance_fraction": 0.20400000000000004,
+      "max_remittances": 4.0,
+      "risk_bias": -0.05400000000000004
+    },
+    "weights": {
+      "alpha": 1.6480000000000006,
+      "beta": 1.7184000000000028,
+      "gamma": 1.654400000000002,
+      "delta": 0.5,
+      "sigmoid_scale": 0.15,
+      "sigmoid_center": 20.0
+    },
+    "summary": [
+      "episodes=90 buckets=5",
+      "weights \u03b1=1.648 \u03b2=1.718 \u03b3=1.654 \u03b4=0.500",
+      "policy remit_frac=0.204 migrate_thr=0.550 risk_bias=-0.054",
+      "metrics yield=0.524 migrate_ok=0.937 inflow_total=52154.6"
+    ]
+  },
+  "agents": {
+    "agent_8472": {
+      "action": "MIGRATE",
+      "confidence": 0.95,
+      "source": "pattern_memory",
+      "pattern_bucket": "w=mid|n=hub|p=strong|f=mid",
+      "gravity_p": 0.8508,
+      "scores": {
+        "MIGRATE": 1.0361,
+        "TRANSFER_CAPITAL": 0.1955,
+        "STAY": 0.0195
+      }
+    },
+    "agent_cluster_2": {
+      "action": "MIGRATE",
+      "confidence": 0.95,
+      "source": "pattern_memory",
+      "pattern_bucket": "w=mid|n=net|p=strong|f=mid",
+      "gravity_p": 0.8459,
+      "scores": {
+        "MIGRATE": 0.9864,
+        "TRANSFER_CAPITAL": 0.2268,
+        "STAY": 0.0278
+      }
+    },
+    "agent_cluster_3": {
+      "action": "MIGRATE",
+      "confidence": 0.5568,
+      "source": "pattern_memory",
+      "pattern_bucket": "w=high|n=solo|p=mod|f=mid",
+      "gravity_p": 0.652,
+      "scores": {
+        "MIGRATE": 0.47,
+        "TRANSFER_CAPITAL": 0.4133,
+        "STAY": 0.0264
+      }
+    },
+    "agent_cluster_4": {
+      "action": "MIGRATE",
+      "confidence": 0.95,
+      "source": "pattern_memory",
+      "pattern_bucket": "w=mid|n=hub|p=strong|f=mid",
+      "gravity_p": 0.8836,
+      "scores": {
+        "MIGRATE": 1.1008,
+        "TRANSFER_CAPITAL": 0.1792,
+        "STAY": 0.015
+      }
+    },
+    "agent_cluster_5": {
+      "action": "MIGRATE",
+      "confidence": 0.95,
+      "source": "pattern_memory",
+      "pattern_bucket": "w=low|n=net|p=strong|f=mid",
+      "gravity_p": 0.785,
+      "scores": {
+        "MIGRATE": 0.9944,
+        "TRANSFER_CAPITAL": 0.2049,
+        "STAY": 0.0238
+      }
+    },
+    "agent_cluster_6": {
+      "action": "MIGRATE",
+      "confidence": 0.8504,
+      "source": "pattern_memory",
+      "pattern_bucket": "w=high|n=solo|p=weak|f=mid",
+      "gravity_p": 0.4898,
+      "scores": {
+        "MIGRATE": 0.5383,
+        "TRANSFER_CAPITAL": 0.1879,
+        "STAY": 0.0226
+      }
+    }
+  },
+  "agent_states": {
+    "agent_8472": {
+      "id": "agent_8472",
+      "name": "Jose_Rojas",
+      "base_wealth": 1500.0,
+      "risk_tolerance": 0.85,
+      "network_size": 4,
+      "dest_jobs": 85.0,
+      "origin_jobs": 12.0,
+      "border_friction": 0.6,
+      "has_migrated": false
+    },
+    "agent_cluster_2": {
+      "id": "agent_cluster_2",
+      "name": "Joseph_Rojas",
+      "base_wealth": 1450.0,
+      "risk_tolerance": 0.8,
+      "network_size": 3,
+      "dest_jobs": 85.0,
+      "origin_jobs": 12.0,
+      "border_friction": 0.6,
+      "has_migrated": false
+    },
+    "agent_cluster_3": {
+      "id": "agent_cluster_3",
+      "name": "Maria_Garcia",
+      "base_wealth": 2200.0,
+      "risk_tolerance": 0.55,
+      "network_size": 1,
+      "dest_jobs": 70.0,
+      "origin_jobs": 18.0,
+      "border_friction": 0.6,
+      "has_migrated": false
+    },
+    "agent_cluster_4": {
+      "id": "agent_cluster_4",
+      "name": "Jose_Rojas",
+      "base_wealth": 1600.0,
+      "risk_tolerance": 0.82,
+      "network_size": 5,
+      "dest_jobs": 90.0,
+      "origin_jobs": 10.0,
+      "border_friction": 0.6,
+      "has_migrated": false
+    },
+    "agent_cluster_5": {
+      "id": "agent_cluster_5",
+      "name": "Ana_Lopez",
+      "base_wealth": 980.0,
+      "risk_tolerance": 0.7,
+      "network_size": 2,
+      "dest_jobs": 75.0,
+      "origin_jobs": 8.0,
+      "border_friction": 0.6,
+      "has_migrated": false
+    },
+    "agent_cluster_6": {
+      "id": "agent_cluster_6",
+      "name": "Carlos_Mendez",
+      "base_wealth": 3100.0,
+      "risk_tolerance": 0.4,
+      "network_size": 0,
+      "dest_jobs": 60.0,
+      "origin_jobs": 22.0,
+      "border_friction": 0.6,
+      "has_migrated": false
+    }
+  },
+  "updated_at": "2026-07-10T05:18:20Z"
+}

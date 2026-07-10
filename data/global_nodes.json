@@ -1,0 +1,1232 @@
+{
+  "_meta": {
+    "purpose": "Structural location indicators for trafficking RISK research (prevention).",
+    "not": "Proof of crimes, victim lists, or how-to guidance for offenders.",
+    "scale": "global",
+    "update": "Seed dataset \u2014 replace/extend with open TIP/UNODC/IOM-style public indicators.",
+    "focus": "Prioritizes publicly documented high-involvement hotspots for prevention scanning.",
+    "node_count": 35
+  },
+  "nodes": [
+    {
+      "id": "loc_mx_zacatecas",
+      "name": "Zacatecas",
+      "country": "Mexico",
+      "region": "Latin America",
+      "lat": 22.7709,
+      "lon": -102.5832,
+      "role": [
+        "origin",
+        "transit"
+      ],
+      "poverty_index": 0.62,
+      "youth_unemployment": 0.55,
+      "female_labor_gap": 0.48,
+      "rule_of_law": 0.42,
+      "conflict_index": 0.35,
+      "corruption_index": 0.58,
+      "border_opacity": 0.45,
+      "recruitment_network_density": 0.52,
+      "remittance_dependency": 0.7,
+      "digital_recruitment_exposure": 0.5,
+      "sex_industry_demand_proxy": 0.25,
+      "labor_demand_proxy": 0.4,
+      "child_protection_capacity": 0.45,
+      "notes": "High remittance corridor origin; rural push factors.",
+      "known_involvement": "elevated",
+      "involvement_types": [
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "TIP_mexico"
+      ]
+    },
+    {
+      "id": "loc_us_elpaso",
+      "name": "El Paso",
+      "country": "USA",
+      "region": "North America",
+      "lat": 31.7619,
+      "lon": -106.485,
+      "role": [
+        "destination",
+        "border_hub",
+        "transit"
+      ],
+      "poverty_index": 0.35,
+      "youth_unemployment": 0.28,
+      "female_labor_gap": 0.3,
+      "rule_of_law": 0.72,
+      "conflict_index": 0.15,
+      "corruption_index": 0.25,
+      "border_opacity": 0.55,
+      "recruitment_network_density": 0.48,
+      "remittance_dependency": 0.2,
+      "digital_recruitment_exposure": 0.55,
+      "sex_industry_demand_proxy": 0.42,
+      "labor_demand_proxy": 0.65,
+      "child_protection_capacity": 0.7,
+      "notes": "US-MX border hub; labor pull + transit exposure.",
+      "known_involvement": "elevated",
+      "involvement_types": [
+        "sex_trafficking",
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "TIP_usa",
+        "border_reporting"
+      ]
+    },
+    {
+      "id": "loc_gt_guatemala_city",
+      "name": "Guatemala City",
+      "country": "Guatemala",
+      "region": "Latin America",
+      "lat": 14.6349,
+      "lon": -90.5069,
+      "role": [
+        "origin",
+        "transit"
+      ],
+      "poverty_index": 0.68,
+      "youth_unemployment": 0.6,
+      "female_labor_gap": 0.55,
+      "rule_of_law": 0.35,
+      "conflict_index": 0.4,
+      "corruption_index": 0.62,
+      "border_opacity": 0.5,
+      "recruitment_network_density": 0.58,
+      "remittance_dependency": 0.75,
+      "digital_recruitment_exposure": 0.48,
+      "sex_industry_demand_proxy": 0.3,
+      "labor_demand_proxy": 0.35,
+      "child_protection_capacity": 0.38,
+      "notes": "Strong northbound migration push; high remittance dependency.",
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking",
+        "labor_trafficking",
+        "child_exploitation"
+      ],
+      "source_tags": [
+        "TIP_guatemala"
+      ]
+    },
+    {
+      "id": "loc_co_medellin",
+      "name": "Medell\u00edn",
+      "country": "Colombia",
+      "region": "Latin America",
+      "lat": 6.2476,
+      "lon": -75.5658,
+      "role": [
+        "origin",
+        "destination",
+        "transit"
+      ],
+      "poverty_index": 0.48,
+      "youth_unemployment": 0.45,
+      "female_labor_gap": 0.42,
+      "rule_of_law": 0.48,
+      "conflict_index": 0.38,
+      "corruption_index": 0.5,
+      "border_opacity": 0.4,
+      "recruitment_network_density": 0.55,
+      "remittance_dependency": 0.35,
+      "digital_recruitment_exposure": 0.6,
+      "sex_industry_demand_proxy": 0.48,
+      "labor_demand_proxy": 0.5,
+      "child_protection_capacity": 0.5,
+      "notes": "Urban demand + regional transit dynamics.",
+      "known_involvement": "elevated",
+      "involvement_types": [
+        "sex_trafficking"
+      ],
+      "source_tags": [
+        "TIP_colombia"
+      ]
+    },
+    {
+      "id": "loc_br_sao_paulo",
+      "name": "S\u00e3o Paulo",
+      "country": "Brazil",
+      "region": "Latin America",
+      "lat": -23.5505,
+      "lon": -46.6333,
+      "role": [
+        "destination",
+        "hub"
+      ],
+      "poverty_index": 0.4,
+      "youth_unemployment": 0.38,
+      "female_labor_gap": 0.35,
+      "rule_of_law": 0.55,
+      "conflict_index": 0.25,
+      "corruption_index": 0.48,
+      "border_opacity": 0.3,
+      "recruitment_network_density": 0.5,
+      "remittance_dependency": 0.15,
+      "digital_recruitment_exposure": 0.62,
+      "sex_industry_demand_proxy": 0.55,
+      "labor_demand_proxy": 0.7,
+      "child_protection_capacity": 0.55,
+      "notes": "Megacity labor and commercial-sex demand proxies.",
+      "known_involvement": "elevated",
+      "involvement_types": [
+        "sex_trafficking",
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "TIP_brazil"
+      ]
+    },
+    {
+      "id": "loc_ng_lagos",
+      "name": "Lagos",
+      "country": "Nigeria",
+      "region": "West Africa",
+      "lat": 6.5244,
+      "lon": 3.3792,
+      "role": [
+        "origin",
+        "hub",
+        "transit"
+      ],
+      "poverty_index": 0.65,
+      "youth_unemployment": 0.7,
+      "female_labor_gap": 0.58,
+      "rule_of_law": 0.38,
+      "conflict_index": 0.42,
+      "corruption_index": 0.6,
+      "border_opacity": 0.48,
+      "recruitment_network_density": 0.68,
+      "remittance_dependency": 0.55,
+      "digital_recruitment_exposure": 0.65,
+      "sex_industry_demand_proxy": 0.4,
+      "labor_demand_proxy": 0.55,
+      "child_protection_capacity": 0.35,
+      "notes": "Major West African origin/hub; recruitment density elevated.",
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking",
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "TIP_nigeria"
+      ]
+    },
+    {
+      "id": "loc_it_sicily",
+      "name": "Sicily (Mediterranean landing)",
+      "country": "Italy",
+      "region": "Europe",
+      "lat": 37.5079,
+      "lon": 14.0934,
+      "role": [
+        "destination",
+        "transit",
+        "landing"
+      ],
+      "poverty_index": 0.38,
+      "youth_unemployment": 0.42,
+      "female_labor_gap": 0.4,
+      "rule_of_law": 0.68,
+      "conflict_index": 0.12,
+      "corruption_index": 0.35,
+      "border_opacity": 0.5,
+      "recruitment_network_density": 0.55,
+      "remittance_dependency": 0.18,
+      "digital_recruitment_exposure": 0.45,
+      "sex_industry_demand_proxy": 0.5,
+      "labor_demand_proxy": 0.55,
+      "child_protection_capacity": 0.65,
+      "notes": "Mediterranean arrival corridor; exploitation risk post-landing.",
+      "known_involvement": "elevated",
+      "involvement_types": [
+        "sex_trafficking",
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "UNODC_mediterranean"
+      ]
+    },
+    {
+      "id": "loc_ly_tripoli",
+      "name": "Tripoli",
+      "country": "Libya",
+      "region": "North Africa",
+      "lat": 32.8872,
+      "lon": 13.1913,
+      "role": [
+        "transit",
+        "detention_risk"
+      ],
+      "poverty_index": 0.55,
+      "youth_unemployment": 0.5,
+      "female_labor_gap": 0.6,
+      "rule_of_law": 0.18,
+      "conflict_index": 0.78,
+      "corruption_index": 0.72,
+      "border_opacity": 0.8,
+      "recruitment_network_density": 0.75,
+      "remittance_dependency": 0.3,
+      "digital_recruitment_exposure": 0.4,
+      "sex_industry_demand_proxy": 0.35,
+      "labor_demand_proxy": 0.4,
+      "child_protection_capacity": 0.2,
+      "notes": "High conflict + opacity transit; severe exploitation risk.",
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "labor_trafficking",
+        "sex_trafficking",
+        "detention_abuse"
+      ],
+      "source_tags": [
+        "TIP_libya",
+        "UNODC_mediterranean"
+      ]
+    },
+    {
+      "id": "loc_th_bangkok",
+      "name": "Bangkok",
+      "country": "Thailand",
+      "region": "Southeast Asia",
+      "lat": 13.7563,
+      "lon": 100.5018,
+      "role": [
+        "destination",
+        "hub",
+        "transit"
+      ],
+      "poverty_index": 0.32,
+      "youth_unemployment": 0.3,
+      "female_labor_gap": 0.35,
+      "rule_of_law": 0.52,
+      "conflict_index": 0.2,
+      "corruption_index": 0.48,
+      "border_opacity": 0.4,
+      "recruitment_network_density": 0.6,
+      "remittance_dependency": 0.25,
+      "digital_recruitment_exposure": 0.7,
+      "sex_industry_demand_proxy": 0.72,
+      "labor_demand_proxy": 0.6,
+      "child_protection_capacity": 0.48,
+      "notes": "Tourism + commercial-sex demand proxies historically elevated.",
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking",
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "TIP_thailand"
+      ]
+    },
+    {
+      "id": "loc_mm_yangon",
+      "name": "Yangon",
+      "country": "Myanmar",
+      "region": "Southeast Asia",
+      "lat": 16.8661,
+      "lon": 96.1951,
+      "role": [
+        "origin",
+        "transit"
+      ],
+      "poverty_index": 0.6,
+      "youth_unemployment": 0.55,
+      "female_labor_gap": 0.5,
+      "rule_of_law": 0.25,
+      "conflict_index": 0.72,
+      "corruption_index": 0.65,
+      "border_opacity": 0.6,
+      "recruitment_network_density": 0.58,
+      "remittance_dependency": 0.5,
+      "digital_recruitment_exposure": 0.45,
+      "sex_industry_demand_proxy": 0.3,
+      "labor_demand_proxy": 0.4,
+      "child_protection_capacity": 0.3,
+      "notes": "Conflict displacement elevates trafficking vulnerability.",
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "labor_trafficking",
+        "sex_trafficking"
+      ],
+      "source_tags": [
+        "TIP_myanmar"
+      ]
+    },
+    {
+      "id": "loc_in_mumbai",
+      "name": "Mumbai",
+      "country": "India",
+      "region": "South Asia",
+      "lat": 19.076,
+      "lon": 72.8777,
+      "role": [
+        "destination",
+        "hub",
+        "origin"
+      ],
+      "poverty_index": 0.5,
+      "youth_unemployment": 0.48,
+      "female_labor_gap": 0.55,
+      "rule_of_law": 0.5,
+      "conflict_index": 0.22,
+      "corruption_index": 0.52,
+      "border_opacity": 0.35,
+      "recruitment_network_density": 0.62,
+      "remittance_dependency": 0.3,
+      "digital_recruitment_exposure": 0.68,
+      "sex_industry_demand_proxy": 0.58,
+      "labor_demand_proxy": 0.72,
+      "child_protection_capacity": 0.42,
+      "notes": "Megacity pull; internal + cross-border exploitation risk.",
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking",
+        "labor_trafficking",
+        "child_exploitation"
+      ],
+      "source_tags": [
+        "TIP_india"
+      ]
+    },
+    {
+      "id": "loc_bd_dhaka",
+      "name": "Dhaka",
+      "country": "Bangladesh",
+      "region": "South Asia",
+      "lat": 23.8103,
+      "lon": 90.4125,
+      "role": [
+        "origin",
+        "hub"
+      ],
+      "poverty_index": 0.58,
+      "youth_unemployment": 0.52,
+      "female_labor_gap": 0.5,
+      "rule_of_law": 0.4,
+      "conflict_index": 0.25,
+      "corruption_index": 0.55,
+      "border_opacity": 0.45,
+      "recruitment_network_density": 0.6,
+      "remittance_dependency": 0.72,
+      "digital_recruitment_exposure": 0.55,
+      "sex_industry_demand_proxy": 0.35,
+      "labor_demand_proxy": 0.55,
+      "child_protection_capacity": 0.4,
+      "notes": "Labor migration + remittance economy; recruitment risk.",
+      "known_involvement": "elevated",
+      "involvement_types": [
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "TIP_bangladesh"
+      ]
+    },
+    {
+      "id": "loc_ae_dubai",
+      "name": "Dubai",
+      "country": "UAE",
+      "region": "Middle East",
+      "lat": 25.2048,
+      "lon": 55.2708,
+      "role": [
+        "destination",
+        "hub"
+      ],
+      "poverty_index": 0.15,
+      "youth_unemployment": 0.18,
+      "female_labor_gap": 0.4,
+      "rule_of_law": 0.65,
+      "conflict_index": 0.1,
+      "corruption_index": 0.3,
+      "border_opacity": 0.35,
+      "recruitment_network_density": 0.55,
+      "remittance_dependency": 0.1,
+      "digital_recruitment_exposure": 0.6,
+      "sex_industry_demand_proxy": 0.45,
+      "labor_demand_proxy": 0.85,
+      "child_protection_capacity": 0.55,
+      "notes": "High labor demand destination; kafala-style vulnerability patterns.",
+      "known_involvement": "elevated",
+      "involvement_types": [
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "TIP_uae",
+        "gulf_labor_reporting"
+      ]
+    },
+    {
+      "id": "loc_tr_istanbul",
+      "name": "Istanbul",
+      "country": "Turkey",
+      "region": "Europe/Middle East",
+      "lat": 41.0082,
+      "lon": 28.9784,
+      "role": [
+        "transit",
+        "hub",
+        "destination"
+      ],
+      "poverty_index": 0.35,
+      "youth_unemployment": 0.4,
+      "female_labor_gap": 0.45,
+      "rule_of_law": 0.48,
+      "conflict_index": 0.3,
+      "corruption_index": 0.48,
+      "border_opacity": 0.55,
+      "recruitment_network_density": 0.62,
+      "remittance_dependency": 0.22,
+      "digital_recruitment_exposure": 0.58,
+      "sex_industry_demand_proxy": 0.48,
+      "labor_demand_proxy": 0.6,
+      "child_protection_capacity": 0.5,
+      "notes": "Eurasian transit megahub.",
+      "known_involvement": "elevated",
+      "involvement_types": [
+        "sex_trafficking",
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "TIP_turkey"
+      ]
+    },
+    {
+      "id": "loc_ua_odesa",
+      "name": "Odesa",
+      "country": "Ukraine",
+      "region": "Eastern Europe",
+      "lat": 46.4825,
+      "lon": 30.7233,
+      "role": [
+        "origin",
+        "transit"
+      ],
+      "poverty_index": 0.45,
+      "youth_unemployment": 0.48,
+      "female_labor_gap": 0.42,
+      "rule_of_law": 0.4,
+      "conflict_index": 0.85,
+      "corruption_index": 0.55,
+      "border_opacity": 0.5,
+      "recruitment_network_density": 0.58,
+      "remittance_dependency": 0.4,
+      "digital_recruitment_exposure": 0.55,
+      "sex_industry_demand_proxy": 0.35,
+      "labor_demand_proxy": 0.35,
+      "child_protection_capacity": 0.35,
+      "notes": "Conflict displacement sharply elevates exploitation risk.",
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking",
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "TIP_conflict"
+      ]
+    },
+    {
+      "id": "loc_ph_manila",
+      "name": "Manila",
+      "country": "Philippines",
+      "region": "Southeast Asia",
+      "lat": 14.5995,
+      "lon": 120.9842,
+      "role": [
+        "origin",
+        "hub"
+      ],
+      "poverty_index": 0.45,
+      "youth_unemployment": 0.42,
+      "female_labor_gap": 0.4,
+      "rule_of_law": 0.48,
+      "conflict_index": 0.25,
+      "corruption_index": 0.5,
+      "border_opacity": 0.35,
+      "recruitment_network_density": 0.65,
+      "remittance_dependency": 0.8,
+      "digital_recruitment_exposure": 0.7,
+      "sex_industry_demand_proxy": 0.45,
+      "labor_demand_proxy": 0.5,
+      "child_protection_capacity": 0.45,
+      "notes": "Very high remittance dependency; overseas labor recruitment.",
+      "known_involvement": "elevated",
+      "involvement_types": [
+        "labor_trafficking",
+        "sex_trafficking"
+      ],
+      "source_tags": [
+        "TIP_philippines"
+      ]
+    },
+    {
+      "id": "loc_us_nyc",
+      "name": "New York City",
+      "country": "USA",
+      "region": "North America",
+      "lat": 40.7128,
+      "lon": -74.006,
+      "role": [
+        "destination",
+        "hub"
+      ],
+      "poverty_index": 0.3,
+      "youth_unemployment": 0.25,
+      "female_labor_gap": 0.28,
+      "rule_of_law": 0.75,
+      "conflict_index": 0.1,
+      "corruption_index": 0.28,
+      "border_opacity": 0.25,
+      "recruitment_network_density": 0.5,
+      "remittance_dependency": 0.12,
+      "digital_recruitment_exposure": 0.65,
+      "sex_industry_demand_proxy": 0.6,
+      "labor_demand_proxy": 0.75,
+      "child_protection_capacity": 0.72,
+      "notes": "Major demand hub for labor and commercial sex markets.",
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking",
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "TIP_usa"
+      ]
+    },
+    {
+      "id": "loc_de_berlin",
+      "name": "Berlin",
+      "country": "Germany",
+      "region": "Europe",
+      "lat": 52.52,
+      "lon": 13.405,
+      "role": [
+        "destination",
+        "hub"
+      ],
+      "poverty_index": 0.22,
+      "youth_unemployment": 0.18,
+      "female_labor_gap": 0.25,
+      "rule_of_law": 0.82,
+      "conflict_index": 0.08,
+      "corruption_index": 0.18,
+      "border_opacity": 0.2,
+      "recruitment_network_density": 0.42,
+      "remittance_dependency": 0.1,
+      "digital_recruitment_exposure": 0.55,
+      "sex_industry_demand_proxy": 0.55,
+      "labor_demand_proxy": 0.65,
+      "child_protection_capacity": 0.8,
+      "notes": "EU destination; regulated markets still have exploitation risk.",
+      "known_involvement": "moderate",
+      "involvement_types": [
+        "sex_trafficking",
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "TIP_germany"
+      ]
+    },
+    {
+      "id": "loc_za_johannesburg",
+      "name": "Johannesburg",
+      "country": "South Africa",
+      "region": "Southern Africa",
+      "lat": -26.2041,
+      "lon": 28.0473,
+      "role": [
+        "destination",
+        "hub",
+        "transit"
+      ],
+      "poverty_index": 0.52,
+      "youth_unemployment": 0.62,
+      "female_labor_gap": 0.45,
+      "rule_of_law": 0.48,
+      "conflict_index": 0.3,
+      "corruption_index": 0.5,
+      "border_opacity": 0.45,
+      "recruitment_network_density": 0.55,
+      "remittance_dependency": 0.25,
+      "digital_recruitment_exposure": 0.55,
+      "sex_industry_demand_proxy": 0.5,
+      "labor_demand_proxy": 0.6,
+      "child_protection_capacity": 0.45,
+      "notes": "Regional migration hub; mixed labor/sex exploitation risk.",
+      "known_involvement": "elevated",
+      "involvement_types": [
+        "sex_trafficking",
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "TIP_south_africa"
+      ]
+    },
+    {
+      "id": "loc_cn_guangzhou",
+      "name": "Guangzhou",
+      "country": "China",
+      "region": "East Asia",
+      "lat": 23.1291,
+      "lon": 113.2644,
+      "role": [
+        "destination",
+        "hub",
+        "transit"
+      ],
+      "poverty_index": 0.25,
+      "youth_unemployment": 0.3,
+      "female_labor_gap": 0.35,
+      "rule_of_law": 0.55,
+      "conflict_index": 0.12,
+      "corruption_index": 0.45,
+      "border_opacity": 0.4,
+      "recruitment_network_density": 0.5,
+      "remittance_dependency": 0.15,
+      "digital_recruitment_exposure": 0.6,
+      "sex_industry_demand_proxy": 0.4,
+      "labor_demand_proxy": 0.8,
+      "child_protection_capacity": 0.5,
+      "notes": "Manufacturing labor demand; irregular migration corridors.",
+      "known_involvement": "elevated",
+      "involvement_types": [
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "TIP_china"
+      ]
+    },
+    {
+      "id": "loc_mx_tenancingo",
+      "name": "Tenancingo (Tlaxcala)",
+      "country": "Mexico",
+      "region": "Latin America",
+      "lat": 19.3372,
+      "lon": -98.2025,
+      "role": [
+        "origin",
+        "recruitment_hub"
+      ],
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking"
+      ],
+      "source_tags": [
+        "TIP_mexico",
+        "open_source_reporting"
+      ],
+      "poverty_index": 0.58,
+      "youth_unemployment": 0.52,
+      "female_labor_gap": 0.55,
+      "rule_of_law": 0.35,
+      "conflict_index": 0.3,
+      "corruption_index": 0.6,
+      "border_opacity": 0.4,
+      "recruitment_network_density": 0.92,
+      "remittance_dependency": 0.55,
+      "digital_recruitment_exposure": 0.5,
+      "sex_industry_demand_proxy": 0.35,
+      "labor_demand_proxy": 0.3,
+      "child_protection_capacity": 0.35,
+      "notes": "Widely cited origin/recruitment area for sex trafficking networks toward US."
+    },
+    {
+      "id": "loc_mx_tijuana",
+      "name": "Tijuana",
+      "country": "Mexico",
+      "region": "Latin America",
+      "lat": 32.5149,
+      "lon": -117.0382,
+      "role": [
+        "border_hub",
+        "transit",
+        "destination"
+      ],
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking",
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "TIP_mexico",
+        "border_reporting"
+      ],
+      "poverty_index": 0.48,
+      "youth_unemployment": 0.42,
+      "female_labor_gap": 0.45,
+      "rule_of_law": 0.38,
+      "conflict_index": 0.45,
+      "corruption_index": 0.58,
+      "border_opacity": 0.62,
+      "recruitment_network_density": 0.7,
+      "remittance_dependency": 0.35,
+      "digital_recruitment_exposure": 0.6,
+      "sex_industry_demand_proxy": 0.68,
+      "labor_demand_proxy": 0.55,
+      "child_protection_capacity": 0.4,
+      "notes": "Major US-MX border hub; commercial sex + smuggling overlap risk."
+    },
+    {
+      "id": "loc_mx_juarez",
+      "name": "Ciudad Ju\u00e1rez",
+      "country": "Mexico",
+      "region": "Latin America",
+      "lat": 31.6904,
+      "lon": -106.4245,
+      "role": [
+        "border_hub",
+        "transit",
+        "destination"
+      ],
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking",
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "TIP_mexico",
+        "border_reporting"
+      ],
+      "poverty_index": 0.5,
+      "youth_unemployment": 0.45,
+      "female_labor_gap": 0.48,
+      "rule_of_law": 0.32,
+      "conflict_index": 0.55,
+      "corruption_index": 0.62,
+      "border_opacity": 0.65,
+      "recruitment_network_density": 0.68,
+      "remittance_dependency": 0.3,
+      "digital_recruitment_exposure": 0.55,
+      "sex_industry_demand_proxy": 0.6,
+      "labor_demand_proxy": 0.58,
+      "child_protection_capacity": 0.38,
+      "notes": "Sister city to El Paso; elevated border exploitation risk."
+    },
+    {
+      "id": "loc_mx_tapachula",
+      "name": "Tapachula",
+      "country": "Mexico",
+      "region": "Latin America",
+      "lat": 14.9056,
+      "lon": -92.2634,
+      "role": [
+        "transit",
+        "border_hub"
+      ],
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking",
+        "labor_trafficking",
+        "child_exploitation"
+      ],
+      "source_tags": [
+        "IOM_central_america",
+        "TIP_mexico"
+      ],
+      "poverty_index": 0.6,
+      "youth_unemployment": 0.55,
+      "female_labor_gap": 0.5,
+      "rule_of_law": 0.3,
+      "conflict_index": 0.4,
+      "corruption_index": 0.6,
+      "border_opacity": 0.7,
+      "recruitment_network_density": 0.72,
+      "remittance_dependency": 0.4,
+      "digital_recruitment_exposure": 0.45,
+      "sex_industry_demand_proxy": 0.42,
+      "labor_demand_proxy": 0.4,
+      "child_protection_capacity": 0.32,
+      "notes": "Southern Mexico migrant bottleneck; high transit exploitation risk."
+    },
+    {
+      "id": "loc_ng_benin_city",
+      "name": "Benin City",
+      "country": "Nigeria",
+      "region": "West Africa",
+      "lat": 6.335,
+      "lon": 5.6037,
+      "role": [
+        "origin",
+        "recruitment_hub"
+      ],
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking"
+      ],
+      "source_tags": [
+        "TIP_nigeria",
+        "UNODC_europe_africa"
+      ],
+      "poverty_index": 0.62,
+      "youth_unemployment": 0.68,
+      "female_labor_gap": 0.6,
+      "rule_of_law": 0.32,
+      "conflict_index": 0.35,
+      "corruption_index": 0.62,
+      "border_opacity": 0.45,
+      "recruitment_network_density": 0.9,
+      "remittance_dependency": 0.6,
+      "digital_recruitment_exposure": 0.55,
+      "sex_industry_demand_proxy": 0.3,
+      "labor_demand_proxy": 0.35,
+      "child_protection_capacity": 0.3,
+      "notes": "Documented major origin for sex trafficking toward Europe."
+    },
+    {
+      "id": "loc_th_pattaya",
+      "name": "Pattaya",
+      "country": "Thailand",
+      "region": "Southeast Asia",
+      "lat": 12.9236,
+      "lon": 100.8825,
+      "role": [
+        "destination",
+        "hub"
+      ],
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking",
+        "child_exploitation"
+      ],
+      "source_tags": [
+        "TIP_thailand",
+        "tourism_reporting"
+      ],
+      "poverty_index": 0.28,
+      "youth_unemployment": 0.25,
+      "female_labor_gap": 0.4,
+      "rule_of_law": 0.48,
+      "conflict_index": 0.15,
+      "corruption_index": 0.5,
+      "border_opacity": 0.35,
+      "recruitment_network_density": 0.65,
+      "remittance_dependency": 0.2,
+      "digital_recruitment_exposure": 0.75,
+      "sex_industry_demand_proxy": 0.9,
+      "labor_demand_proxy": 0.45,
+      "child_protection_capacity": 0.4,
+      "notes": "Tourism-linked commercial sex demand hub; high sex trafficking risk proxy."
+    },
+    {
+      "id": "loc_kh_sihanoukville",
+      "name": "Sihanoukville",
+      "country": "Cambodia",
+      "region": "Southeast Asia",
+      "lat": 10.627,
+      "lon": 103.522,
+      "role": [
+        "destination",
+        "hub"
+      ],
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "labor_trafficking",
+        "forced_scam_compound"
+      ],
+      "source_tags": [
+        "TIP_cambodia",
+        "UNODC_scam_compounds",
+        "open_source_reporting"
+      ],
+      "poverty_index": 0.45,
+      "youth_unemployment": 0.4,
+      "female_labor_gap": 0.42,
+      "rule_of_law": 0.28,
+      "conflict_index": 0.2,
+      "corruption_index": 0.65,
+      "border_opacity": 0.55,
+      "recruitment_network_density": 0.85,
+      "remittance_dependency": 0.25,
+      "digital_recruitment_exposure": 0.9,
+      "sex_industry_demand_proxy": 0.45,
+      "labor_demand_proxy": 0.7,
+      "child_protection_capacity": 0.3,
+      "notes": "Public reporting on scam-compound forced labor / trafficking."
+    },
+    {
+      "id": "loc_mm_myawaddy",
+      "name": "Myawaddy (border)",
+      "country": "Myanmar",
+      "region": "Southeast Asia",
+      "lat": 16.6891,
+      "lon": 98.5089,
+      "role": [
+        "transit",
+        "border_hub"
+      ],
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "labor_trafficking",
+        "forced_scam_compound",
+        "sex_trafficking"
+      ],
+      "source_tags": [
+        "TIP_myanmar",
+        "UNODC_scam_compounds"
+      ],
+      "poverty_index": 0.58,
+      "youth_unemployment": 0.55,
+      "female_labor_gap": 0.48,
+      "rule_of_law": 0.15,
+      "conflict_index": 0.8,
+      "corruption_index": 0.7,
+      "border_opacity": 0.85,
+      "recruitment_network_density": 0.88,
+      "remittance_dependency": 0.35,
+      "digital_recruitment_exposure": 0.7,
+      "sex_industry_demand_proxy": 0.4,
+      "labor_demand_proxy": 0.55,
+      "child_protection_capacity": 0.2,
+      "notes": "Conflict border zone; scam compounds and cross-border trafficking risk."
+    },
+    {
+      "id": "loc_in_kolkata",
+      "name": "Kolkata",
+      "country": "India",
+      "region": "South Asia",
+      "lat": 22.5726,
+      "lon": 88.3639,
+      "role": [
+        "destination",
+        "hub",
+        "transit"
+      ],
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking",
+        "child_exploitation",
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "TIP_india",
+        "south_asia_reporting"
+      ],
+      "poverty_index": 0.52,
+      "youth_unemployment": 0.48,
+      "female_labor_gap": 0.55,
+      "rule_of_law": 0.45,
+      "conflict_index": 0.2,
+      "corruption_index": 0.52,
+      "border_opacity": 0.4,
+      "recruitment_network_density": 0.7,
+      "remittance_dependency": 0.3,
+      "digital_recruitment_exposure": 0.6,
+      "sex_industry_demand_proxy": 0.72,
+      "labor_demand_proxy": 0.6,
+      "child_protection_capacity": 0.35,
+      "notes": "Major internal trafficking destination/transit patterns reported."
+    },
+    {
+      "id": "loc_ro_bucharest",
+      "name": "Bucharest",
+      "country": "Romania",
+      "region": "Eastern Europe",
+      "lat": 44.4268,
+      "lon": 26.1025,
+      "role": [
+        "origin",
+        "transit",
+        "hub"
+      ],
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking",
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "TIP_romania",
+        "EU_reporting"
+      ],
+      "poverty_index": 0.35,
+      "youth_unemployment": 0.38,
+      "female_labor_gap": 0.4,
+      "rule_of_law": 0.55,
+      "conflict_index": 0.12,
+      "corruption_index": 0.45,
+      "border_opacity": 0.3,
+      "recruitment_network_density": 0.72,
+      "remittance_dependency": 0.4,
+      "digital_recruitment_exposure": 0.65,
+      "sex_industry_demand_proxy": 0.4,
+      "labor_demand_proxy": 0.45,
+      "child_protection_capacity": 0.5,
+      "notes": "EU-documented origin/transit for sex and labor trafficking into Western Europe."
+    },
+    {
+      "id": "loc_al_tirana",
+      "name": "Tirana",
+      "country": "Albania",
+      "region": "Eastern Europe",
+      "lat": 41.3275,
+      "lon": 19.8187,
+      "role": [
+        "origin",
+        "transit"
+      ],
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking",
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "TIP_albania",
+        "EU_reporting"
+      ],
+      "poverty_index": 0.42,
+      "youth_unemployment": 0.5,
+      "female_labor_gap": 0.45,
+      "rule_of_law": 0.42,
+      "conflict_index": 0.15,
+      "corruption_index": 0.55,
+      "border_opacity": 0.4,
+      "recruitment_network_density": 0.75,
+      "remittance_dependency": 0.55,
+      "digital_recruitment_exposure": 0.55,
+      "sex_industry_demand_proxy": 0.35,
+      "labor_demand_proxy": 0.4,
+      "child_protection_capacity": 0.42,
+      "notes": "Long-documented SE Europe origin corridor into EU demand markets."
+    },
+    {
+      "id": "loc_qa_doha",
+      "name": "Doha",
+      "country": "Qatar",
+      "region": "Middle East",
+      "lat": 25.2854,
+      "lon": 51.531,
+      "role": [
+        "destination",
+        "hub"
+      ],
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "TIP_qatar",
+        "gulf_labor_reporting"
+      ],
+      "poverty_index": 0.12,
+      "youth_unemployment": 0.15,
+      "female_labor_gap": 0.45,
+      "rule_of_law": 0.6,
+      "conflict_index": 0.08,
+      "corruption_index": 0.32,
+      "border_opacity": 0.35,
+      "recruitment_network_density": 0.6,
+      "remittance_dependency": 0.08,
+      "digital_recruitment_exposure": 0.55,
+      "sex_industry_demand_proxy": 0.35,
+      "labor_demand_proxy": 0.92,
+      "child_protection_capacity": 0.5,
+      "notes": "High migrant labor demand; sponsorship vulnerability patterns."
+    },
+    {
+      "id": "loc_ke_nairobi",
+      "name": "Nairobi",
+      "country": "Kenya",
+      "region": "East Africa",
+      "lat": -1.2921,
+      "lon": 36.8219,
+      "role": [
+        "origin",
+        "hub",
+        "transit"
+      ],
+      "known_involvement": "elevated",
+      "involvement_types": [
+        "labor_trafficking",
+        "sex_trafficking",
+        "child_exploitation"
+      ],
+      "source_tags": [
+        "TIP_kenya"
+      ],
+      "poverty_index": 0.55,
+      "youth_unemployment": 0.6,
+      "female_labor_gap": 0.5,
+      "rule_of_law": 0.42,
+      "conflict_index": 0.3,
+      "corruption_index": 0.55,
+      "border_opacity": 0.45,
+      "recruitment_network_density": 0.65,
+      "remittance_dependency": 0.45,
+      "digital_recruitment_exposure": 0.6,
+      "sex_industry_demand_proxy": 0.48,
+      "labor_demand_proxy": 0.55,
+      "child_protection_capacity": 0.4,
+      "notes": "East African hub; domestic + Gulf labor recruitment risk."
+    },
+    {
+      "id": "loc_us_houston",
+      "name": "Houston",
+      "country": "USA",
+      "region": "North America",
+      "lat": 29.7604,
+      "lon": -95.3698,
+      "role": [
+        "destination",
+        "hub"
+      ],
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking",
+        "labor_trafficking"
+      ],
+      "source_tags": [
+        "TIP_usa",
+        "US_city_taskforces"
+      ],
+      "poverty_index": 0.32,
+      "youth_unemployment": 0.28,
+      "female_labor_gap": 0.3,
+      "rule_of_law": 0.72,
+      "conflict_index": 0.12,
+      "corruption_index": 0.28,
+      "border_opacity": 0.3,
+      "recruitment_network_density": 0.55,
+      "remittance_dependency": 0.15,
+      "digital_recruitment_exposure": 0.65,
+      "sex_industry_demand_proxy": 0.65,
+      "labor_demand_proxy": 0.7,
+      "child_protection_capacity": 0.68,
+      "notes": "Major US metro with active anti-trafficking task forces; high case volume reported."
+    },
+    {
+      "id": "loc_us_atlanta",
+      "name": "Atlanta",
+      "country": "USA",
+      "region": "North America",
+      "lat": 33.749,
+      "lon": -84.388,
+      "role": [
+        "destination",
+        "hub"
+      ],
+      "known_involvement": "confirmed_high",
+      "involvement_types": [
+        "sex_trafficking"
+      ],
+      "source_tags": [
+        "TIP_usa",
+        "US_city_taskforces"
+      ],
+      "poverty_index": 0.3,
+      "youth_unemployment": 0.28,
+      "female_labor_gap": 0.28,
+      "rule_of_law": 0.72,
+      "conflict_index": 0.1,
+      "corruption_index": 0.28,
+      "border_opacity": 0.22,
+      "recruitment_network_density": 0.58,
+      "remittance_dependency": 0.12,
+      "digital_recruitment_exposure": 0.7,
+      "sex_industry_demand_proxy": 0.72,
+      "labor_demand_proxy": 0.6,
+      "child_protection_capacity": 0.65,
+      "notes": "Airport hub + demand market; frequently cited in US sex trafficking cases."
+    }
+  ]
+}

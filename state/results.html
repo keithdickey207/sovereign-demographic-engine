@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Sovereign Demographic — Results</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 820px; margin: 2rem auto;
+         padding: 0 1rem; background: #0f1419; color: #e7ecf1; }
+  h1 { font-size: 1.4rem; }
+  .card { background: #1a2332; border-radius: 12px; padding: 1.25rem; margin: 1rem 0; }
+  .big { font-size: 1.8rem; color: #3dd68c; font-weight: 700; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { text-align: left; padding: 0.5rem 0.4rem; border-bottom: 1px solid #2a3544; }
+  th { color: #8b9bb0; font-weight: 600; }
+  .muted { color: #8b9bb0; }
+</style>
+</head>
+<body>
+  <h1>Sovereign Demographic Engine — Results</h1>
+  <p class="muted">tick 326 · 32.6s · local</p>
+  <div class="card">
+    <div class="muted">Origin remittance wealth (Zacatecas)</div>
+    <div class="big">$6,497.25</div>
+    <p>6/6 agents SETTLED ·
+       pulses 24/24 ·
+       total remitted $6,497</p>
+  </div>
+  <div class="card">
+    <h2>Agents</h2>
+    <table>
+      <tr><th>Name</th><th>State</th><th>Wealth left</th><th>Sent home</th><th>Yield</th><th>Pulses</th></tr>
+      <tr><td>Jose_Rojas</td><td><b>SETTLED</b></td><td>$602</td><td>$898</td><td>59.9%</td><td>4</td></tr>
+<tr><td>Joseph_Rojas</td><td><b>SETTLED</b></td><td>$581</td><td>$869</td><td>59.9%</td><td>4</td></tr>
+<tr><td>Maria_Garcia</td><td><b>SETTLED</b></td><td>$881</td><td>$1,319</td><td>60.0%</td><td>4</td></tr>
+<tr><td>Jose_Rojas</td><td><b>SETTLED</b></td><td>$640</td><td>$960</td><td>60.0%</td><td>4</td></tr>
+<tr><td>Ana_Lopez</td><td><b>SETTLED</b></td><td>$391</td><td>$589</td><td>60.1%</td><td>4</td></tr>
+<tr><td>Carlos_Mendez</td><td><b>SETTLED</b></td><td>$1,237</td><td>$1,863</td><td>60.1%</td><td>4</td></tr>
+
+    </table>
+  </div>
+  <div class="card">
+    <h2>Learning</h2>
+    <p>episodes=96 · remit_frac=0.21000000000000005 ·
+       risk_bias=-0.060000000000000046 · α=1.7200000000000006 β=1.7760000000000031 γ=1.6160000000000023</p>
+  </div>
+  <p class="muted">Open this file anytime: state/results.html · re-run with
+  <code>python scripts/show_results.py --html</code></p>
+</body>
+</html>

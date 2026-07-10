@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<title>SOVEREIGN GOD MODE — Quest / Desktop</title>
+<style>
+  html, body { margin:0; height:100%; background:#05080f; color:#e8eef7; font-family: system-ui, sans-serif; overflow:hidden; }
+  #hud {
+    position: fixed; left: 12px; top: 12px; z-index: 20;
+    background: rgba(8,14,24,.82); border: 1px solid #2a3b55; border-radius: 12px;
+    padding: 12px 14px; max-width: min(420px, 92vw); backdrop-filter: blur(8px);
+    font-size: 13px; line-height: 1.35;
+  }
+  #hud h1 { margin: 0 0 6px; font-size: 15px; letter-spacing: .04em; color: #7cf0c2; }
+  #hud .row { color: #9db0c9; margin: 2px 0; }
+  #hud b { color: #e8eef7; }
+  #controls {
+    position: fixed; right: 12px; top: 12px; z-index: 20; display: flex; flex-direction: column; gap: 8px;
+  }
+  button, .toggle {
+    background: #132033; color: #e8eef7; border: 1px solid #3d5a80; border-radius: 10px;
+    padding: 10px 14px; font-size: 13px; cursor: pointer;
+  }
+  button:hover { background: #1b2d46; }
+  button.primary { background: #0f3d32; border-color: #2ecc9a; color: #baf8df; }
+  button.primary:hover { background: #145c49; }
+  #legend {
+    position: fixed; left: 12px; bottom: 12px; z-index: 20;
+    background: rgba(8,14,24,.8); border: 1px solid #2a3b55; border-radius: 10px;
+    padding: 10px 12px; font-size: 12px;
+  }
+  .sw { display:inline-block; width:10px; height:10px; border-radius:2px; margin-right:6px; }
+  #vr-hint { color:#f0c674; font-size:12px; margin-top:8px; }
+  canvas { display:block; }
+</style>
+</head>
+<body>
+<div id="hud">
+  <h1>SOVEREIGN GOD MODE</h1>
+  <div class="row">Field tick <b id="t-tick">—</b> · uptime <b id="t-up">—</b>s</div>
+  <div class="row">WiFi APs <b id="t-wifi">0</b> · Printers <b id="t-prt">0</b> · Motion <b id="t-mot">0</b></div>
+  <div class="row">Heat cells <b id="t-heat">0</b> · Quest devices <b id="t-quest">0</b></div>
+  <div class="row">Layers: <span id="t-layers">…</span></div>
+  <div id="vr-hint">Meta Quest: open this URL in Quest Browser → ENTER VR</div>
+</div>
+<div id="controls">
+  <button class="primary" id="btn-vr">ENTER VR / GOD MODE</button>
+  <button id="btn-scan">FORCE SENSOR SCAN</button>
+  <button id="btn-wifi" class="toggle" data-on="1">WiFi heat ON</button>
+  <button id="btn-print" class="toggle" data-on="1">Printers ON</button>
+  <button id="btn-motion" class="toggle" data-on="1">Motion ON</button>
+  <button id="btn-build" class="toggle" data-on="1">Buildings ON</button>
+</div>
+<div id="legend">
+  <div><span class="sw" style="background:#3b82f6"></span>WiFi heat</div>
+  <div><span class="sw" style="background:#f59e0b"></span>Printers</div>
+  <div><span class="sw" style="background:#ef4444"></span>Motion / Quest</div>
+  <div><span class="sw" style="background:#22c55e"></span>Agents</div>
+  <div><span class="sw" style="background:#64748b"></span>Buildings</div>
+</div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+<script type="module">
+import * as THREE from 'three';
+import { VRButton } from 'three/addons/webxr/VRButton.js';
+import { XRControllerModelFactory } from 'three/addons/webxr/XRControllerModelFactory.js';
+
+const state = {
+  showWifi: true,
+  showPrint: true,
+  showMotion: true,
+  showBuild: true,
+  field: null,
+};
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x05080f);
+scene.fog = new THREE.Fog(0x05080f, 80, 420);
+
+const camera = new THREE.PerspectiveCamera(70, innerWidth / innerHeight, 0.1, 2000);
+camera.position.set(0, 80, 140);
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
+renderer.setSize(innerWidth, innerHeight);
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.xr.enabled = true;
+document.body.appendChild(renderer.domElement);
+
+// Desktop orbit-ish controls via pointer
+let drag = false, px = 0, py = 0, yaw = 0.4, pitch = 0.5, dist = 180;
+renderer.domElement.addEventListener('pointerdown', e => { drag = true; px = e.clientX; py = e.clientY; });
+window.addEventListener('pointerup', () => drag = false);
+window.addEventListener('pointermove', e => {
+  if (!drag || renderer.xr.isPresenting) return;
+  yaw -= (e.clientX - px) * 0.005;
+  pitch = Math.max(0.15, Math.min(1.4, pitch + (e.clientY - py) * 0.005));
+  px = e.clientX; py = e.clientY;
+});
+renderer.domElement.addEventListener('wheel', e => {
+  dist = Math.max(40, Math.min(400, dist + e.deltaY * 0.1));
+});
+
+// Lights
+scene.add(new THREE.AmbientLight(0x6a7a90, 0.7));
+const sun = new THREE.DirectionalLight(0xffffff, 0.85);
+sun.position.set(40, 100, 30);
+scene.add(sun);
+
+// Ground grid
+const grid = new THREE.GridHelper(320, 40, 0x1e3a5f, 0x122033);
+grid.position.y = 0.02;
+scene.add(grid);
+const ground = new THREE.Mesh(
+  new THREE.PlaneGeometry(400, 400),
+  new THREE.MeshStandardMaterial({ color: 0x0b1220, roughness: 0.9, metalness: 0.1 })
+);
+ground.rotation.x = -Math.PI / 2;
+scene.add(ground);
+
+// Groups
+const gBuildings = new THREE.Group(); scene.add(gBuildings);
+const gWifi = new THREE.Group(); scene.add(gWifi);
+const gPrint = new THREE.Group(); scene.add(gPrint);
+const gMotion = new THREE.Group(); scene.add(gMotion);
+const gHeat = new THREE.Group(); scene.add(gHeat);
+const gAgents = new THREE.Group(); scene.add(gAgents);
+const gQuest = new THREE.Group(); scene.add(gQuest);
+const gLabels = new THREE.Group(); scene.add(gLabels);
+
+// VR button + controllers
+const vrBtn = VRButton.createButton(renderer);
+vrBtn.style.display = 'none';
+document.body.appendChild(vrBtn);
+document.getElementById('btn-vr').onclick = () => {
+  if (renderer.xr.isPresenting) {
+    const s = renderer.xr.getSession();
+    if (s) s.end();
+  } else {
+    vrBtn.click();
+  }
+};
+
+const controller1 = renderer.xr.getController(0);
+const controller2 = renderer.xr.getController(1);
+scene.add(controller1); scene.add(controller2);
+const controllerModelFactory = new XRControllerModelFactory();
+const grip1 = renderer.xr.getControllerGrip(0);
+grip1.add(controllerModelFactory.createControllerModel(grip1));
+scene.add(grip1);
+const grip2 = renderer.xr.getControllerGrip(1);
+grip2.add(controllerModelFactory.createControllerModel(grip2));
+scene.add(grip2);
+
+// teleport / fly with thumbstick-ish: drag in VR not available; use continuous float camera rig
+const rig = new THREE.Group();
+rig.add(camera);
+scene.add(rig);
+
+function clearGroup(g) {
+  while (g.children.length) {
+    const o = g.children.pop();
+    if (o.geometry) o.geometry.dispose();
+    if (o.material) {
+      if (Array.isArray(o.material)) o.material.forEach(m => m.dispose());
+      else o.material.dispose();
+    }
+  }
+}
+
+function makeBuilding(b) {
+  const poly = b.polygon || [];
+  if (poly.length < 3) return null;
+  let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+  poly.forEach(([x, y]) => {
+    minX = Math.min(minX, x); maxX = Math.max(maxX, x);
+    minY = Math.min(minY, y); maxY = Math.max(maxY, y);
+  });
+  const w = Math.max(4, maxX - minX);
+  const d = Math.max(4, maxY - minY);
+  const h = b.height_m || 10;
+  const cx = (minX + maxX) / 2;
+  const cy = (minY + maxY) / 2;
+  const geo = new THREE.BoxGeometry(w, h, d);
+  const mat = new THREE.MeshStandardMaterial({
+    color: b.type === 'warehouse' ? 0x334155
+      : b.type === 'security' ? 0x7f1d1d
+      : b.type === 'lab' ? 0x1e3a5f
+      : b.type === 'residential' ? 0x365314
+      : 0x1f2937,
+    transparent: true,
+    opacity: 0.82,
+    roughness: 0.75,
+  });
+  const mesh = new THREE.Mesh(geo, mat);
+  mesh.position.set(cx, h / 2, cy);
+  mesh.userData = { id: b.id, name: b.name };
+  // wire edges
+  const edges = new THREE.LineSegments(
+    new THREE.EdgesGeometry(geo),
+    new THREE.LineBasicMaterial({ color: 0x93c5fd })
+  );
+  mesh.add(edges);
+  return mesh;
+}
+
+function rebuildBuildings(field) {
+  clearGroup(gBuildings);
+  if (!state.showBuild) return;
+  for (const b of field.buildings || []) {
+    const m = makeBuilding(b);
+    if (m) gBuildings.add(m);
+  }
+  // zone outlines
+  for (const z of field.zones || []) {
+    const pts = (z.polygon || []).map(([x, y]) => new THREE.Vector3(x, 0.05, y));
+    if (pts.length < 2) continue;
+    pts.push(pts[0].clone());
+    const geo = new THREE.BufferGeometry().setFromPoints(pts);
+    gBuildings.add(new THREE.Line(geo, new THREE.LineBasicMaterial({ color: 0x475569 })));
+  }
+}
+
+function rebuildHeat(field) {
+  clearGroup(gHeat);
+  if (!state.showWifi) return;
+  for (const c of field.heat || []) {
+    const t = c.total || 0;
+    if (t < 0.05) continue;
+    const r = 3 + t * 8;
+    const geo = new THREE.SphereGeometry(r, 12, 12);
+    const col = new THREE.Color().setHSL(0.6 - t * 0.45, 0.85, 0.45);
+    const mat = new THREE.MeshBasicMaterial({
+      color: col, transparent: true, opacity: 0.18 + t * 0.35, depthWrite: false,
+    });
+    const m = new THREE.Mesh(geo, mat);
+    m.position.set(c.x, 1 + t * 6, c.y);
+    gHeat.add(m);
+  }
+}
+
+function rebuildWifi(field) {
+  clearGroup(gWifi);
+  if (!state.showWifi) return;
+  for (const ap of field.wifi || []) {
+    const sig = (ap.signal || 50) / 100;
+    const geo = new THREE.CylinderGeometry(0.4, 0.4, 1 + sig * 8, 8);
+    const mat = new THREE.MeshStandardMaterial({ color: 0x3b82f6, emissive: 0x1d4ed8, emissiveIntensity: 0.4 });
+    const m = new THREE.Mesh(geo, mat);
+    m.position.set(ap.x || 0, (1 + sig * 8) / 2, ap.y || 0);
+    gWifi.add(m);
+    // range ring
+    const ring = new THREE.Mesh(
+      new THREE.RingGeometry(2, 2 + sig * 25, 32),
+      new THREE.MeshBasicMaterial({ color: 0x3b82f6, transparent: true, opacity: 0.12, side: THREE.DoubleSide })
+    );
+    ring.rotation.x = -Math.PI / 2;
+    ring.position.set(ap.x || 0, 0.1, ap.y || 0);
+    gWifi.add(ring);
+  }
+}
+
+function rebuildPrinters(field) {
+  clearGroup(gPrint);
+  if (!state.showPrint) return;
+  for (const p of field.printers || []) {
+    const act = p.activity || 0.3;
+    const geo = new THREE.BoxGeometry(1.4, 1.2, 1.4);
+    const mat = new THREE.MeshStandardMaterial({
+      color: 0xf59e0b, emissive: 0xb45309, emissiveIntensity: 0.3 + act,
+    });
+    const m = new THREE.Mesh(geo, mat);
+    m.position.set(p.x || 0, 0.7, p.y || 0);
+    gPrint.add(m);
+    if (act > 0.4) {
+      const pulse = new THREE.Mesh(
+        new THREE.SphereGeometry(0.5 + act, 10, 10),
+        new THREE.MeshBasicMaterial({ color: 0xfbbf24, transparent: true, opacity: 0.35 })
+      );
+      pulse.position.copy(m.position);
+      pulse.position.y = 2;
+      gPrint.add(pulse);
+    }
+  }
+}
+
+function rebuildMotion(field) {
+  clearGroup(gMotion);
+  clearGroup(gAgents);
+  clearGroup(gQuest);
+  if (!state.showMotion) return;
+  for (const m of field.movement || []) {
+    const kind = m.kind || 'motion';
+    if (kind === 'agent') {
+      const mesh = new THREE.Mesh(
+        new THREE.CapsuleGeometry(0.5, 1.2, 4, 8),
+        new THREE.MeshStandardMaterial({ color: 0x22c55e, emissive: 0x14532d })
+      );
+      mesh.position.set(m.x || 0, 1.2, m.y || 0);
+      gAgents.add(mesh);
+    } else if (kind === 'quest') {
+      const mesh = new THREE.Mesh(
+        new THREE.OctahedronGeometry(0.8),
+        new THREE.MeshStandardMaterial({ color: 0xa855f7, emissive: 0x6b21a8, emissiveIntensity: 0.6 })
+      );
+      mesh.position.set(m.x || 0, m.z || 1.6, m.y || 0);
+      gQuest.add(mesh);
+    } else {
+      const active = m.active || (m.intensity || 0) > 0.2;
+      const mesh = new THREE.Mesh(
+        new THREE.SphereGeometry(active ? 1.2 : 0.5, 12, 12),
+        new THREE.MeshBasicMaterial({
+          color: active ? 0xef4444 : 0x7f1d1d,
+          transparent: true,
+          opacity: active ? 0.7 : 0.25,
+        })
+      );
+      mesh.position.set(m.x || 0, m.z || 2, m.y || 0);
+      gMotion.add(mesh);
+    }
+  }
+}
+
+function updateHud(field) {
+  document.getElementById('t-tick').textContent = field.tick ?? '—';
+  document.getElementById('t-up').textContent = field.uptime_s ?? '—';
+  document.getElementById('t-wifi').textContent = (field.wifi || []).length;
+  document.getElementById('t-prt').textContent = (field.printers || []).length;
+  document.getElementById('t-mot').textContent = (field.movement || []).length;
+  document.getElementById('t-heat').textContent = (field.heat || []).length;
+  document.getElementById('t-quest').textContent = (field.quest || []).length;
+  document.getElementById('t-layers').textContent =
+    `wifi=${state.showWifi} print=${state.showPrint} motion=${state.showMotion} bldg=${state.showBuild}`;
+}
+
+function applyField(field) {
+  state.field = field;
+  rebuildBuildings(field);
+  rebuildHeat(field);
+  rebuildWifi(field);
+  rebuildPrinters(field);
+  rebuildMotion(field);
+  updateHud(field);
+}
+
+async function fetchField() {
+  try {
+    const r = await fetch('/api/field?ts=' + Date.now(), { cache: 'no-store' });
+    if (!r.ok) return;
+    applyField(await r.json());
+  } catch (e) {
+    console.warn('field fetch', e);
+  }
+}
+
+document.getElementById('btn-scan').onclick = async () => {
+  await fetch('/api/scan');
+  await fetchField();
+};
+
+function wireToggle(id, key, label) {
+  const el = document.getElementById(id);
+  el.onclick = () => {
+    state[key] = !state[key];
+    el.dataset.on = state[key] ? '1' : '0';
+    el.textContent = label + (state[key] ? ' ON' : ' OFF');
+    if (state.field) applyField(state.field);
+  };
+}
+wireToggle('btn-wifi', 'showWifi', 'WiFi heat');
+wireToggle('btn-print', 'showPrint', 'Printers');
+wireToggle('btn-motion', 'showMotion', 'Motion');
+wireToggle('btn-build', 'showBuild', 'Buildings');
+
+// Post Quest pose when in XR
+let questId = 'quest-' + Math.random().toString(36).slice(2, 8);
+function postQuestPose() {
+  if (!renderer.xr.isPresenting) return;
+  const xrCam = renderer.xr.getCamera();
+  const p = new THREE.Vector3();
+  const q = new THREE.Quaternion();
+  xrCam.getWorldPosition(p);
+  xrCam.getWorldQuaternion(q);
+  const euler = new THREE.Euler().setFromQuaternion(q, 'YXZ');
+  fetch('/api/quest', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      id: questId,
+      name: 'Meta Quest',
+      x: p.x,
+      y: p.z, // map three Z to field Y
+      z: p.y,
+      yaw: euler.y,
+      pitch: euler.x,
+      kind: 'quest',
+      ts: Date.now() / 1000,
+    }),
+  }).catch(() => {});
+}
+
+window.addEventListener('resize', () => {
+  camera.aspect = innerWidth / innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth, innerHeight);
+});
+
+// Desktop camera
+function updateDesktopCamera() {
+  if (renderer.xr.isPresenting) return;
+  const x = Math.sin(yaw) * Math.cos(pitch) * dist;
+  const y = Math.sin(pitch) * dist;
+  const z = Math.cos(yaw) * Math.cos(pitch) * dist;
+  camera.position.set(x, y, z);
+  camera.lookAt(0, 5, 0);
+}
+
+renderer.setAnimationLoop(() => {
+  updateDesktopCamera();
+  postQuestPose();
+  renderer.render(scene, camera);
+});
+
+// boot
+fetchField();
+setInterval(fetchField, 1500);
+setInterval(postQuestPose, 500);
+
+// fixed sensors markers once field loads — drawn via wifi/print/motion
+console.log('[godmode] ready — WebXR enabled for Meta Quest Browser');
+</script>
+</body>
+</html>

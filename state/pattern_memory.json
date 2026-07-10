@@ -1,0 +1,1435 @@
+{
+  "version": 1,
+  "updated_at": "2026-07-10T05:18:52Z",
+  "episode_count": 96,
+  "weights": {
+    "alpha": 1.7200000000000006,
+    "beta": 1.7760000000000031,
+    "gamma": 1.6160000000000023,
+    "delta": 0.5,
+    "sigmoid_scale": 0.15,
+    "sigmoid_center": 20.0
+  },
+  "policy": {
+    "migrate_threshold": 0.55,
+    "transfer_threshold": 0.5,
+    "remittance_fraction": 0.21000000000000005,
+    "max_remittances": 4,
+    "risk_bias": -0.060000000000000046
+  },
+  "buckets": {
+    "w=mid|n=hub|p=strong|f=mid": {
+      "n": 12,
+      "rate_MIGRATE": 1.0,
+      "rate_STAY": 0.0,
+      "rate_TRANSFER_CAPITAL": 0.0,
+      "reward_ema": 0.9373839727662421,
+      "migrate_success": 0.9224372063618105,
+      "remit_yield_ema": 0.5222872299034275
+    },
+    "w=mid|n=net|p=strong|f=mid": {
+      "n": 6,
+      "rate_MIGRATE": 1.0,
+      "rate_STAY": 0.0,
+      "rate_TRANSFER_CAPITAL": 0.0,
+      "reward_ema": 0.72456524804673,
+      "migrate_success": 0.721499023990598,
+      "remit_yield_ema": 0.39989068725096066
+    },
+    "w=high|n=solo|p=mod|f=mid": {
+      "n": 6,
+      "rate_MIGRATE": 0.16666666666666666,
+      "rate_STAY": 0.0,
+      "rate_TRANSFER_CAPITAL": 0.8333333333333334,
+      "reward_ema": 0.7249589637454197,
+      "migrate_success": 0.721499023990598,
+      "remit_yield_ema": 0.4002844029496505
+    },
+    "w=low|n=net|p=strong|f=mid": {
+      "n": 6,
+      "rate_MIGRATE": 1.0,
+      "rate_STAY": 0.0,
+      "rate_TRANSFER_CAPITAL": 0.0,
+      "reward_ema": 0.7257463951427993,
+      "migrate_success": 0.721499023990598,
+      "remit_yield_ema": 0.4010718343470302
+    },
+    "w=high|n=solo|p=weak|f=mid": {
+      "n": 6,
+      "rate_MIGRATE": 0.6666666666666666,
+      "rate_STAY": 0.0,
+      "rate_TRANSFER_CAPITAL": 0.3333333333333333,
+      "reward_ema": 0.726140110841489,
+      "migrate_success": 0.721499023990598,
+      "remit_yield_ema": 0.40146555004572
+    }
+  },
+  "action_priors": {
+    "MIGRATE": 0.7771107155181592,
+    "STAY": 0.0520671408801149,
+    "TRANSFER_CAPITAL": 0.17082214360172582
+  },
+  "episodes": [
+    {
+      "ts": "2026-07-10T04:09:35Z",
+      "kind": "decision",
+      "agent_id": "agent_8472",
+      "action": "MIGRATE",
+      "confidence": 0.592,
+      "bucket": "w=mid|n=hub|p=strong|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 1500.0,
+        "network_size": 4,
+        "dest_jobs": 85.0,
+        "origin_jobs": 12.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T04:09:35Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_2",
+      "action": "MIGRATE",
+      "confidence": 0.6247,
+      "bucket": "w=mid|n=net|p=strong|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 1450.0,
+        "network_size": 3,
+        "dest_jobs": 85.0,
+        "origin_jobs": 12.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T04:09:35Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_3",
+      "action": "TRANSFER_CAPITAL",
+      "confidence": 0.5462,
+      "bucket": "w=high|n=solo|p=mod|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 2200.0,
+        "network_size": 1,
+        "dest_jobs": 70.0,
+        "origin_jobs": 18.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T04:09:35Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_4",
+      "action": "MIGRATE",
+      "confidence": 0.636,
+      "bucket": "w=mid|n=hub|p=strong|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 1600.0,
+        "network_size": 5,
+        "dest_jobs": 90.0,
+        "origin_jobs": 10.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T04:09:35Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_5",
+      "action": "MIGRATE",
+      "confidence": 0.6508,
+      "bucket": "w=low|n=net|p=strong|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 980.0,
+        "network_size": 2,
+        "dest_jobs": 75.0,
+        "origin_jobs": 8.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T04:09:35Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_6",
+      "action": "TRANSFER_CAPITAL",
+      "confidence": 0.4545,
+      "bucket": "w=high|n=solo|p=weak|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 3100.0,
+        "network_size": 0,
+        "dest_jobs": 60.0,
+        "origin_jobs": 22.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T04:10:07Z",
+      "kind": "episode",
+      "agent_id": "agent_8472",
+      "migrated": true,
+      "total_remitted": 716.99,
+      "start_wealth": 1500.0,
+      "yield_frac": 0.478,
+      "reward": 0.928,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=hub|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:10:07Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_2",
+      "migrated": true,
+      "total_remitted": 693.98,
+      "start_wealth": 1450.0,
+      "yield_frac": 0.4786,
+      "reward": 0.9286,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=net|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:10:07Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_3",
+      "migrated": true,
+      "total_remitted": 1054.29,
+      "start_wealth": 2200.0,
+      "yield_frac": 0.4792,
+      "reward": 0.9292,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=high|n=solo|p=mod|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:10:07Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_4",
+      "migrated": true,
+      "total_remitted": 767.74,
+      "start_wealth": 1600.0,
+      "yield_frac": 0.4798,
+      "reward": 0.9298,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=hub|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:10:07Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_5",
+      "migrated": true,
+      "total_remitted": 470.84,
+      "start_wealth": 980.0,
+      "yield_frac": 0.4805,
+      "reward": 0.9305,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=low|n=net|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:10:07Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_6",
+      "migrated": true,
+      "total_remitted": 1491.3,
+      "start_wealth": 3100.0,
+      "yield_frac": 0.4811,
+      "reward": 0.9311,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=high|n=solo|p=weak|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:10:40Z",
+      "kind": "episode",
+      "agent_id": "agent_8472",
+      "migrated": true,
+      "total_remitted": 738.87,
+      "start_wealth": 1500.0,
+      "yield_frac": 0.4926,
+      "reward": 0.9426,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=hub|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:10:40Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_2",
+      "migrated": true,
+      "total_remitted": 715.11,
+      "start_wealth": 1450.0,
+      "yield_frac": 0.4932,
+      "reward": 0.9432,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=net|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:10:40Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_3",
+      "migrated": true,
+      "total_remitted": 1086.32,
+      "start_wealth": 2200.0,
+      "yield_frac": 0.4938,
+      "reward": 0.9438,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=high|n=solo|p=mod|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:10:40Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_4",
+      "migrated": true,
+      "total_remitted": 791.01,
+      "start_wealth": 1600.0,
+      "yield_frac": 0.4944,
+      "reward": 0.9444,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=hub|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:10:40Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_5",
+      "migrated": true,
+      "total_remitted": 485.08,
+      "start_wealth": 980.0,
+      "yield_frac": 0.495,
+      "reward": 0.945,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=low|n=net|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:10:40Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_6",
+      "migrated": true,
+      "total_remitted": 1536.31,
+      "start_wealth": 3100.0,
+      "yield_frac": 0.4956,
+      "reward": 0.9456,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=high|n=solo|p=weak|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:12:54Z",
+      "kind": "episode",
+      "agent_id": "agent_8472",
+      "migrated": true,
+      "total_remitted": 760.28,
+      "start_wealth": 1500.0,
+      "yield_frac": 0.5069,
+      "reward": 0.9569,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=hub|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:12:54Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_2",
+      "migrated": true,
+      "total_remitted": 735.79,
+      "start_wealth": 1450.0,
+      "yield_frac": 0.5074,
+      "reward": 0.9574,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=net|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:12:54Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_3",
+      "migrated": true,
+      "total_remitted": 1117.67,
+      "start_wealth": 2200.0,
+      "yield_frac": 0.508,
+      "reward": 0.958,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=high|n=solo|p=mod|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:12:54Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_4",
+      "migrated": true,
+      "total_remitted": 813.79,
+      "start_wealth": 1600.0,
+      "yield_frac": 0.5086,
+      "reward": 0.9586,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=hub|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:12:54Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_5",
+      "migrated": true,
+      "total_remitted": 499.02,
+      "start_wealth": 980.0,
+      "yield_frac": 0.5092,
+      "reward": 0.9592,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=low|n=net|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:12:54Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_6",
+      "migrated": true,
+      "total_remitted": 1580.37,
+      "start_wealth": 3100.0,
+      "yield_frac": 0.5098,
+      "reward": 0.9598,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=high|n=solo|p=weak|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:13:59Z",
+      "kind": "episode",
+      "agent_id": "agent_8472",
+      "migrated": true,
+      "total_remitted": 781.24,
+      "start_wealth": 1500.0,
+      "yield_frac": 0.5208,
+      "reward": 0.9708,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=hub|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:13:59Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_2",
+      "migrated": true,
+      "total_remitted": 756.03,
+      "start_wealth": 1450.0,
+      "yield_frac": 0.5214,
+      "reward": 0.9714,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=net|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:13:59Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_3",
+      "migrated": true,
+      "total_remitted": 1148.35,
+      "start_wealth": 2200.0,
+      "yield_frac": 0.522,
+      "reward": 0.972,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=high|n=solo|p=mod|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:13:59Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_4",
+      "migrated": true,
+      "total_remitted": 836.09,
+      "start_wealth": 1600.0,
+      "yield_frac": 0.5226,
+      "reward": 0.9726,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=hub|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:13:59Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_5",
+      "migrated": true,
+      "total_remitted": 512.67,
+      "start_wealth": 980.0,
+      "yield_frac": 0.5231,
+      "reward": 0.9731,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=low|n=net|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:13:59Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_6",
+      "migrated": true,
+      "total_remitted": 1623.49,
+      "start_wealth": 3100.0,
+      "yield_frac": 0.5237,
+      "reward": 0.9737,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=high|n=solo|p=weak|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:14:21Z",
+      "kind": "decision",
+      "agent_id": "agent_8472",
+      "action": "MIGRATE",
+      "confidence": 0.7158,
+      "bucket": "w=mid|n=hub|p=strong|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 1500.0,
+        "network_size": 4,
+        "dest_jobs": 85.0,
+        "origin_jobs": 12.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T04:14:21Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_2",
+      "action": "MIGRATE",
+      "confidence": 0.7391,
+      "bucket": "w=mid|n=net|p=strong|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 1450.0,
+        "network_size": 3,
+        "dest_jobs": 85.0,
+        "origin_jobs": 12.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T04:14:21Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_3",
+      "action": "TRANSFER_CAPITAL",
+      "confidence": 0.4794,
+      "bucket": "w=high|n=solo|p=mod|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 2200.0,
+        "network_size": 1,
+        "dest_jobs": 70.0,
+        "origin_jobs": 18.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T04:14:21Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_4",
+      "action": "MIGRATE",
+      "confidence": 0.8604,
+      "bucket": "w=mid|n=hub|p=strong|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 1600.0,
+        "network_size": 5,
+        "dest_jobs": 90.0,
+        "origin_jobs": 10.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T04:14:21Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_5",
+      "action": "MIGRATE",
+      "confidence": 0.7553,
+      "bucket": "w=low|n=net|p=strong|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 980.0,
+        "network_size": 2,
+        "dest_jobs": 75.0,
+        "origin_jobs": 8.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T04:14:21Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_6",
+      "action": "TRANSFER_CAPITAL",
+      "confidence": 0.5,
+      "bucket": "w=high|n=solo|p=weak|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 3100.0,
+        "network_size": 0,
+        "dest_jobs": 60.0,
+        "origin_jobs": 22.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T04:14:54Z",
+      "kind": "episode",
+      "agent_id": "agent_8472",
+      "migrated": true,
+      "total_remitted": 801.75,
+      "start_wealth": 1500.0,
+      "yield_frac": 0.5345,
+      "reward": 0.9845,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=hub|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:14:54Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_2",
+      "migrated": true,
+      "total_remitted": 775.84,
+      "start_wealth": 1450.0,
+      "yield_frac": 0.5351,
+      "reward": 0.9851,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=net|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:14:54Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_3",
+      "migrated": true,
+      "total_remitted": 1178.38,
+      "start_wealth": 2200.0,
+      "yield_frac": 0.5356,
+      "reward": 0.9856,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=high|n=solo|p=mod|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:14:54Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_4",
+      "migrated": true,
+      "total_remitted": 857.9,
+      "start_wealth": 1600.0,
+      "yield_frac": 0.5362,
+      "reward": 0.9862,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=hub|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:14:54Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_5",
+      "migrated": true,
+      "total_remitted": 526.02,
+      "start_wealth": 980.0,
+      "yield_frac": 0.5368,
+      "reward": 0.9868,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=low|n=net|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:14:54Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_6",
+      "migrated": true,
+      "total_remitted": 1665.68,
+      "start_wealth": 3100.0,
+      "yield_frac": 0.5373,
+      "reward": 0.9873,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=high|n=solo|p=weak|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:17:13Z",
+      "kind": "episode",
+      "agent_id": "agent_8472",
+      "migrated": true,
+      "total_remitted": 821.82,
+      "start_wealth": 1500.0,
+      "yield_frac": 0.5479,
+      "reward": 0.9979,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=hub|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:17:13Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_2",
+      "migrated": true,
+      "total_remitted": 795.22,
+      "start_wealth": 1450.0,
+      "yield_frac": 0.5484,
+      "reward": 0.9984,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=net|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:17:13Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_3",
+      "migrated": true,
+      "total_remitted": 1207.76,
+      "start_wealth": 2200.0,
+      "yield_frac": 0.549,
+      "reward": 0.999,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=high|n=solo|p=mod|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:17:13Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_4",
+      "migrated": true,
+      "total_remitted": 879.25,
+      "start_wealth": 1600.0,
+      "yield_frac": 0.5495,
+      "reward": 0.9995,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=hub|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:17:13Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_5",
+      "migrated": true,
+      "total_remitted": 539.08,
+      "start_wealth": 980.0,
+      "yield_frac": 0.5501,
+      "reward": 1.0001,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=low|n=net|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:17:13Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_6",
+      "migrated": true,
+      "total_remitted": 1706.97,
+      "start_wealth": 3100.0,
+      "yield_frac": 0.5506,
+      "reward": 1.0006,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=high|n=solo|p=weak|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:17:16Z",
+      "kind": "decision",
+      "agent_id": "agent_8472",
+      "action": "MIGRATE",
+      "confidence": 0.9392,
+      "bucket": "w=mid|n=hub|p=strong|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 1500.0,
+        "network_size": 4,
+        "dest_jobs": 85.0,
+        "origin_jobs": 12.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T04:17:16Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_2",
+      "action": "MIGRATE",
+      "confidence": 0.82,
+      "bucket": "w=mid|n=net|p=strong|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 1450.0,
+        "network_size": 3,
+        "dest_jobs": 85.0,
+        "origin_jobs": 12.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T04:17:16Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_3",
+      "action": "TRANSFER_CAPITAL",
+      "confidence": 0.5,
+      "bucket": "w=high|n=solo|p=mod|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 2200.0,
+        "network_size": 1,
+        "dest_jobs": 70.0,
+        "origin_jobs": 18.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T04:17:16Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_4",
+      "action": "MIGRATE",
+      "confidence": 0.95,
+      "bucket": "w=mid|n=hub|p=strong|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 1600.0,
+        "network_size": 5,
+        "dest_jobs": 90.0,
+        "origin_jobs": 10.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T04:17:16Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_5",
+      "action": "MIGRATE",
+      "confidence": 0.8298,
+      "bucket": "w=low|n=net|p=strong|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 980.0,
+        "network_size": 2,
+        "dest_jobs": 75.0,
+        "origin_jobs": 8.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T04:17:16Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_6",
+      "action": "MIGRATE",
+      "confidence": 0.5794,
+      "bucket": "w=high|n=solo|p=weak|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 3100.0,
+        "network_size": 0,
+        "dest_jobs": 60.0,
+        "origin_jobs": 22.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T04:17:48Z",
+      "kind": "episode",
+      "agent_id": "agent_8472",
+      "migrated": true,
+      "total_remitted": 841.45,
+      "start_wealth": 1500.0,
+      "yield_frac": 0.561,
+      "reward": 1.011,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=hub|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:17:48Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_2",
+      "migrated": true,
+      "total_remitted": 814.18,
+      "start_wealth": 1450.0,
+      "yield_frac": 0.5615,
+      "reward": 1.0115,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=net|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:17:48Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_3",
+      "migrated": true,
+      "total_remitted": 1236.5,
+      "start_wealth": 2200.0,
+      "yield_frac": 0.562,
+      "reward": 1.012,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=high|n=solo|p=mod|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:17:48Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_4",
+      "migrated": true,
+      "total_remitted": 900.14,
+      "start_wealth": 1600.0,
+      "yield_frac": 0.5626,
+      "reward": 1.0126,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=hub|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:17:48Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_5",
+      "migrated": true,
+      "total_remitted": 551.86,
+      "start_wealth": 980.0,
+      "yield_frac": 0.5631,
+      "reward": 1.0131,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=low|n=net|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T04:17:48Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_6",
+      "migrated": true,
+      "total_remitted": 1747.36,
+      "start_wealth": 3100.0,
+      "yield_frac": 0.5637,
+      "reward": 1.0137,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=high|n=solo|p=weak|f=mid"
+    },
+    {
+      "ts": "2026-07-10T05:16:18Z",
+      "kind": "decision",
+      "agent_id": "agent_8472",
+      "action": "MIGRATE",
+      "confidence": 0.95,
+      "bucket": "w=mid|n=hub|p=strong|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 1500.0,
+        "network_size": 4,
+        "dest_jobs": 85.0,
+        "origin_jobs": 12.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T05:16:18Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_2",
+      "action": "MIGRATE",
+      "confidence": 0.95,
+      "bucket": "w=mid|n=net|p=strong|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 1450.0,
+        "network_size": 3,
+        "dest_jobs": 85.0,
+        "origin_jobs": 12.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T05:16:18Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_3",
+      "action": "TRANSFER_CAPITAL",
+      "confidence": 0.5,
+      "bucket": "w=high|n=solo|p=mod|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 2200.0,
+        "network_size": 1,
+        "dest_jobs": 70.0,
+        "origin_jobs": 18.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T05:16:18Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_4",
+      "action": "MIGRATE",
+      "confidence": 0.95,
+      "bucket": "w=mid|n=hub|p=strong|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 1600.0,
+        "network_size": 5,
+        "dest_jobs": 90.0,
+        "origin_jobs": 10.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T05:16:18Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_5",
+      "action": "MIGRATE",
+      "confidence": 0.95,
+      "bucket": "w=low|n=net|p=strong|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 980.0,
+        "network_size": 2,
+        "dest_jobs": 75.0,
+        "origin_jobs": 8.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T05:16:18Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_6",
+      "action": "MIGRATE",
+      "confidence": 0.611,
+      "bucket": "w=high|n=solo|p=weak|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 3100.0,
+        "network_size": 0,
+        "dest_jobs": 60.0,
+        "origin_jobs": 22.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T05:16:51Z",
+      "kind": "episode",
+      "agent_id": "agent_8472",
+      "migrated": true,
+      "total_remitted": 860.65,
+      "start_wealth": 1500.0,
+      "yield_frac": 0.5738,
+      "reward": 1.0238,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=hub|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T05:16:51Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_2",
+      "migrated": true,
+      "total_remitted": 832.73,
+      "start_wealth": 1450.0,
+      "yield_frac": 0.5743,
+      "reward": 1.0243,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=net|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T05:16:51Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_3",
+      "migrated": true,
+      "total_remitted": 1264.61,
+      "start_wealth": 2200.0,
+      "yield_frac": 0.5748,
+      "reward": 1.0248,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=high|n=solo|p=mod|f=mid"
+    },
+    {
+      "ts": "2026-07-10T05:16:51Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_4",
+      "migrated": true,
+      "total_remitted": 920.56,
+      "start_wealth": 1600.0,
+      "yield_frac": 0.5754,
+      "reward": 1.0254,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=hub|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T05:16:51Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_5",
+      "migrated": true,
+      "total_remitted": 564.36,
+      "start_wealth": 980.0,
+      "yield_frac": 0.5759,
+      "reward": 1.0259,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=low|n=net|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T05:16:51Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_6",
+      "migrated": true,
+      "total_remitted": 1786.86,
+      "start_wealth": 3100.0,
+      "yield_frac": 0.5764,
+      "reward": 1.0264,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=high|n=solo|p=weak|f=mid"
+    },
+    {
+      "ts": "2026-07-10T05:17:37Z",
+      "kind": "decision",
+      "agent_id": "agent_8472",
+      "action": "MIGRATE",
+      "confidence": 0.95,
+      "bucket": "w=mid|n=hub|p=strong|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 1500.0,
+        "network_size": 4,
+        "dest_jobs": 85.0,
+        "origin_jobs": 12.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T05:17:37Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_2",
+      "action": "MIGRATE",
+      "confidence": 0.95,
+      "bucket": "w=mid|n=net|p=strong|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 1450.0,
+        "network_size": 3,
+        "dest_jobs": 85.0,
+        "origin_jobs": 12.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T05:17:37Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_3",
+      "action": "TRANSFER_CAPITAL",
+      "confidence": 0.5,
+      "bucket": "w=high|n=solo|p=mod|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 2200.0,
+        "network_size": 1,
+        "dest_jobs": 70.0,
+        "origin_jobs": 18.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T05:17:37Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_4",
+      "action": "MIGRATE",
+      "confidence": 0.95,
+      "bucket": "w=mid|n=hub|p=strong|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 1600.0,
+        "network_size": 5,
+        "dest_jobs": 90.0,
+        "origin_jobs": 10.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T05:17:37Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_5",
+      "action": "MIGRATE",
+      "confidence": 0.95,
+      "bucket": "w=low|n=net|p=strong|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 980.0,
+        "network_size": 2,
+        "dest_jobs": 75.0,
+        "origin_jobs": 8.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T05:17:37Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_6",
+      "action": "MIGRATE",
+      "confidence": 0.7126,
+      "bucket": "w=high|n=solo|p=weak|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 3100.0,
+        "network_size": 0,
+        "dest_jobs": 60.0,
+        "origin_jobs": 22.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T05:18:09Z",
+      "kind": "episode",
+      "agent_id": "agent_8472",
+      "migrated": true,
+      "total_remitted": 879.43,
+      "start_wealth": 1500.0,
+      "yield_frac": 0.5863,
+      "reward": 1.0363,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=hub|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T05:18:09Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_2",
+      "migrated": true,
+      "total_remitted": 850.87,
+      "start_wealth": 1450.0,
+      "yield_frac": 0.5868,
+      "reward": 1.0368,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=net|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T05:18:09Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_3",
+      "migrated": true,
+      "total_remitted": 1292.1,
+      "start_wealth": 2200.0,
+      "yield_frac": 0.5873,
+      "reward": 1.0373,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=high|n=solo|p=mod|f=mid"
+    },
+    {
+      "ts": "2026-07-10T05:18:09Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_4",
+      "migrated": true,
+      "total_remitted": 940.54,
+      "start_wealth": 1600.0,
+      "yield_frac": 0.5878,
+      "reward": 1.0378,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=hub|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T05:18:09Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_5",
+      "migrated": true,
+      "total_remitted": 576.58,
+      "start_wealth": 980.0,
+      "yield_frac": 0.5884,
+      "reward": 1.0384,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=low|n=net|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T05:18:09Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_6",
+      "migrated": true,
+      "total_remitted": 1825.49,
+      "start_wealth": 3100.0,
+      "yield_frac": 0.5889,
+      "reward": 1.0389,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=high|n=solo|p=weak|f=mid"
+    },
+    {
+      "ts": "2026-07-10T05:18:20Z",
+      "kind": "decision",
+      "agent_id": "agent_8472",
+      "action": "MIGRATE",
+      "confidence": 0.95,
+      "bucket": "w=mid|n=hub|p=strong|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 1500.0,
+        "network_size": 4,
+        "dest_jobs": 85.0,
+        "origin_jobs": 12.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T05:18:20Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_2",
+      "action": "MIGRATE",
+      "confidence": 0.95,
+      "bucket": "w=mid|n=net|p=strong|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 1450.0,
+        "network_size": 3,
+        "dest_jobs": 85.0,
+        "origin_jobs": 12.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T05:18:20Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_3",
+      "action": "MIGRATE",
+      "confidence": 0.5568,
+      "bucket": "w=high|n=solo|p=mod|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 2200.0,
+        "network_size": 1,
+        "dest_jobs": 70.0,
+        "origin_jobs": 18.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T05:18:20Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_4",
+      "action": "MIGRATE",
+      "confidence": 0.95,
+      "bucket": "w=mid|n=hub|p=strong|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 1600.0,
+        "network_size": 5,
+        "dest_jobs": 90.0,
+        "origin_jobs": 10.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T05:18:20Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_5",
+      "action": "MIGRATE",
+      "confidence": 0.95,
+      "bucket": "w=low|n=net|p=strong|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 980.0,
+        "network_size": 2,
+        "dest_jobs": 75.0,
+        "origin_jobs": 8.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T05:18:20Z",
+      "kind": "decision",
+      "agent_id": "agent_cluster_6",
+      "action": "MIGRATE",
+      "confidence": 0.8504,
+      "bucket": "w=high|n=solo|p=weak|f=mid",
+      "source": "pattern_memory",
+      "features": {
+        "wealth": 3100.0,
+        "network_size": 0,
+        "dest_jobs": 60.0,
+        "origin_jobs": 22.0,
+        "border_friction": 0.6
+      }
+    },
+    {
+      "ts": "2026-07-10T05:18:52Z",
+      "kind": "episode",
+      "agent_id": "agent_8472",
+      "migrated": true,
+      "total_remitted": 897.8,
+      "start_wealth": 1500.0,
+      "yield_frac": 0.5985,
+      "reward": 1.0485,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=hub|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T05:18:52Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_2",
+      "migrated": true,
+      "total_remitted": 868.6,
+      "start_wealth": 1450.0,
+      "yield_frac": 0.599,
+      "reward": 1.049,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=net|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T05:18:52Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_3",
+      "migrated": true,
+      "total_remitted": 1318.99,
+      "start_wealth": 2200.0,
+      "yield_frac": 0.5995,
+      "reward": 1.0495,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=high|n=solo|p=mod|f=mid"
+    },
+    {
+      "ts": "2026-07-10T05:18:52Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_4",
+      "migrated": true,
+      "total_remitted": 960.07,
+      "start_wealth": 1600.0,
+      "yield_frac": 0.6,
+      "reward": 1.05,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=mid|n=hub|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T05:18:52Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_5",
+      "migrated": true,
+      "total_remitted": 588.54,
+      "start_wealth": 980.0,
+      "yield_frac": 0.6005,
+      "reward": 1.0505,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=low|n=net|p=strong|f=mid"
+    },
+    {
+      "ts": "2026-07-10T05:18:52Z",
+      "kind": "episode",
+      "agent_id": "agent_cluster_6",
+      "migrated": true,
+      "total_remitted": 1863.26,
+      "start_wealth": 3100.0,
+      "yield_frac": 0.6011,
+      "reward": 1.0511,
+      "remittance_count": 4,
+      "transit_time_s": 24.0,
+      "bucket": "w=high|n=solo|p=weak|f=mid"
+    }
+  ],
+  "metrics": {
+    "avg_remit_yield": 0.544400853422213,
+    "avg_migrate_success": 0.953930201013048,
+    "origin_inflow_total": 58651.82175626056
+  }
+}

@@ -1,0 +1,464 @@
+{
+  "_meta": {
+    "purpose": "Documented migration/exploitation RISK corridor templates (public research style).",
+    "disclaimer": "Patterns indicate elevated structural risk \u2014 not confirmed trafficking cases.",
+    "corridor_count": 20
+  },
+  "corridors": [
+    {
+      "id": "cor_mx_us_border",
+      "name": "Central Mexico \u2192 US Southwest border",
+      "origin": "loc_mx_zacatecas",
+      "destination": "loc_us_elpaso",
+      "via": [],
+      "typologies": [
+        "labor_trafficking_risk",
+        "sex_trafficking_risk",
+        "smuggling_overlap"
+      ],
+      "intensity": 0.72,
+      "signals": [
+        "high_remittance_dependency_at_origin",
+        "asymmetric_wage_pull",
+        "border_hub_transit",
+        "informal_recruiter_networks"
+      ],
+      "literature_tags": [
+        "TIP_americas",
+        "IOM_central_america"
+      ],
+      "known_involvement": "elevated"
+    },
+    {
+      "id": "cor_gt_us",
+      "name": "Guatemala \u2192 US border hubs",
+      "origin": "loc_gt_guatemala_city",
+      "destination": "loc_us_elpaso",
+      "via": [
+        "loc_mx_zacatecas"
+      ],
+      "typologies": [
+        "labor_trafficking_risk",
+        "sex_trafficking_risk",
+        "child_exploitation_risk"
+      ],
+      "intensity": 0.78,
+      "signals": [
+        "family_separation_pressure",
+        "debt_bondage_recruitment",
+        "multi_leg_transit"
+      ],
+      "literature_tags": [
+        "TIP_americas"
+      ],
+      "known_involvement": "elevated"
+    },
+    {
+      "id": "cor_ng_it",
+      "name": "West Africa \u2192 Mediterranean Europe",
+      "origin": "loc_ng_lagos",
+      "destination": "loc_it_sicily",
+      "via": [
+        "loc_ly_tripoli"
+      ],
+      "typologies": [
+        "sex_trafficking_risk",
+        "labor_trafficking_risk",
+        "detention_abuse_risk"
+      ],
+      "intensity": 0.88,
+      "signals": [
+        "conflict_transit_zone",
+        "extreme_border_opacity",
+        "juju_debt_coercion_patterns_reported_in_literature",
+        "sea_landing_vulnerability"
+      ],
+      "literature_tags": [
+        "UNODC_mediterranean",
+        "TIP_africa_europe"
+      ],
+      "known_involvement": "confirmed_high"
+    },
+    {
+      "id": "cor_mm_th",
+      "name": "Myanmar \u2192 Thailand hubs",
+      "origin": "loc_mm_yangon",
+      "destination": "loc_th_bangkok",
+      "via": [],
+      "typologies": [
+        "labor_trafficking_risk",
+        "sex_trafficking_risk",
+        "forced_marriage_risk"
+      ],
+      "intensity": 0.8,
+      "signals": [
+        "conflict_displacement",
+        "tourism_demand_hub",
+        "cross_border_informality"
+      ],
+      "literature_tags": [
+        "TIP_se_asia"
+      ],
+      "known_involvement": "confirmed_high"
+    },
+    {
+      "id": "cor_bd_ae",
+      "name": "South Asia labor \u2192 Gulf",
+      "origin": "loc_bd_dhaka",
+      "destination": "loc_ae_dubai",
+      "via": [],
+      "typologies": [
+        "labor_trafficking_risk",
+        "debt_bondage_risk"
+      ],
+      "intensity": 0.75,
+      "signals": [
+        "recruitment_fee_debt",
+        "high_labor_demand_destination",
+        "remittance_pressure"
+      ],
+      "literature_tags": [
+        "TIP_gulf_labor"
+      ],
+      "known_involvement": "elevated"
+    },
+    {
+      "id": "cor_ph_gulf",
+      "name": "Philippines OFW \u2192 Gulf / global",
+      "origin": "loc_ph_manila",
+      "destination": "loc_ae_dubai",
+      "via": [],
+      "typologies": [
+        "labor_trafficking_risk",
+        "domestic_servitude_risk"
+      ],
+      "intensity": 0.7,
+      "signals": [
+        "extreme_remittance_dependency",
+        "overseas_placement_networks",
+        "domestic_work_isolation"
+      ],
+      "literature_tags": [
+        "TIP_philippines"
+      ],
+      "known_involvement": "elevated"
+    },
+    {
+      "id": "cor_ua_eu",
+      "name": "Ukraine displacement \u2192 EU hubs",
+      "origin": "loc_ua_odesa",
+      "destination": "loc_de_berlin",
+      "via": [
+        "loc_tr_istanbul"
+      ],
+      "typologies": [
+        "sex_trafficking_risk",
+        "labor_trafficking_risk",
+        "child_exploitation_risk"
+      ],
+      "intensity": 0.82,
+      "signals": [
+        "conflict_displacement",
+        "family_fragmentation",
+        "urgent_housing_employment_need"
+      ],
+      "literature_tags": [
+        "TIP_conflict",
+        "IOM_displacement"
+      ],
+      "known_involvement": "confirmed_high"
+    },
+    {
+      "id": "cor_in_internal_mumbai",
+      "name": "Internal South Asia \u2192 Mumbai",
+      "origin": "loc_bd_dhaka",
+      "destination": "loc_in_mumbai",
+      "via": [],
+      "typologies": [
+        "labor_trafficking_risk",
+        "sex_trafficking_risk",
+        "child_exploitation_risk"
+      ],
+      "intensity": 0.74,
+      "signals": [
+        "rural_urban_poverty_gradient",
+        "informal_sector_absorption",
+        "red_light_district_demand_proxies"
+      ],
+      "literature_tags": [
+        "TIP_south_asia"
+      ],
+      "known_involvement": "elevated"
+    },
+    {
+      "id": "cor_co_br",
+      "name": "Andean \u2192 Brazilian megacity",
+      "origin": "loc_co_medellin",
+      "destination": "loc_br_sao_paulo",
+      "via": [],
+      "typologies": [
+        "sex_trafficking_risk",
+        "labor_trafficking_risk"
+      ],
+      "intensity": 0.65,
+      "signals": [
+        "urban_demand",
+        "regional_mobility",
+        "digital_recruitment"
+      ],
+      "literature_tags": [
+        "TIP_south_america"
+      ],
+      "known_involvement": "elevated"
+    },
+    {
+      "id": "cor_za_regional",
+      "name": "Southern Africa regional into Johannesburg",
+      "origin": "loc_ng_lagos",
+      "destination": "loc_za_johannesburg",
+      "via": [],
+      "typologies": [
+        "labor_trafficking_risk",
+        "sex_trafficking_risk"
+      ],
+      "intensity": 0.68,
+      "signals": [
+        "regional_economic_asymmetric_pull",
+        "mixed_migration_flows"
+      ],
+      "literature_tags": [
+        "TIP_southern_africa"
+      ],
+      "known_involvement": "elevated"
+    },
+    {
+      "id": "cor_global_to_nyc",
+      "name": "Global irregular \u2192 NYC demand hub",
+      "origin": "loc_gt_guatemala_city",
+      "destination": "loc_us_nyc",
+      "via": [
+        "loc_us_elpaso"
+      ],
+      "typologies": [
+        "labor_trafficking_risk",
+        "sex_trafficking_risk"
+      ],
+      "intensity": 0.7,
+      "signals": [
+        "long_haul_debt",
+        "destination_demand_markets",
+        "language_isolation"
+      ],
+      "literature_tags": [
+        "TIP_usa"
+      ],
+      "known_involvement": "elevated"
+    },
+    {
+      "id": "cor_se_asia_cn",
+      "name": "SE Asia labor \u2192 South China manufacturing",
+      "origin": "loc_mm_yangon",
+      "destination": "loc_cn_guangzhou",
+      "via": [
+        "loc_th_bangkok"
+      ],
+      "typologies": [
+        "labor_trafficking_risk",
+        "forced_scam_compound_risk"
+      ],
+      "intensity": 0.77,
+      "signals": [
+        "conflict_origin",
+        "transit_hub_layering",
+        "manufacturing_demand"
+      ],
+      "literature_tags": [
+        "TIP_se_asia",
+        "UNODC_scam_compounds"
+      ],
+      "known_involvement": "elevated"
+    },
+    {
+      "id": "cor_tenancingo_us",
+      "name": "Tlaxcala/Tenancingo recruitment \u2192 US demand cities",
+      "origin": "loc_mx_tenancingo",
+      "destination": "loc_us_atlanta",
+      "via": [
+        "loc_mx_juarez",
+        "loc_us_elpaso",
+        "loc_us_houston"
+      ],
+      "typologies": [
+        "sex_trafficking_risk"
+      ],
+      "intensity": 0.92,
+      "known_involvement": "confirmed_high",
+      "signals": [
+        "family_based_recruitment_networks",
+        "us_demand_cities",
+        "debt_coercion_patterns"
+      ],
+      "literature_tags": [
+        "TIP_mexico",
+        "TIP_usa"
+      ]
+    },
+    {
+      "id": "cor_benin_europe",
+      "name": "Benin City \u2192 Mediterranean Europe",
+      "origin": "loc_ng_benin_city",
+      "destination": "loc_it_sicily",
+      "via": [
+        "loc_ly_tripoli"
+      ],
+      "typologies": [
+        "sex_trafficking_risk",
+        "debt_bondage_risk"
+      ],
+      "intensity": 0.93,
+      "known_involvement": "confirmed_high",
+      "signals": [
+        "origin_recruitment_hub",
+        "conflict_transit",
+        "eu_destination_markets"
+      ],
+      "literature_tags": [
+        "UNODC_mediterranean",
+        "TIP_nigeria"
+      ]
+    },
+    {
+      "id": "cor_se_scam_compounds",
+      "name": "SE Asia forced scam compound corridor",
+      "origin": "loc_mm_myawaddy",
+      "destination": "loc_kh_sihanoukville",
+      "via": [
+        "loc_th_bangkok"
+      ],
+      "typologies": [
+        "forced_scam_compound_risk",
+        "labor_trafficking_risk"
+      ],
+      "intensity": 0.94,
+      "known_involvement": "confirmed_high",
+      "signals": [
+        "digital_job_lures",
+        "border_compound_detention",
+        "passport_confiscation_patterns"
+      ],
+      "literature_tags": [
+        "UNODC_scam_compounds",
+        "TIP_se_asia"
+      ]
+    },
+    {
+      "id": "cor_tapachula_north",
+      "name": "Tapachula bottleneck \u2192 US border",
+      "origin": "loc_mx_tapachula",
+      "destination": "loc_us_elpaso",
+      "via": [
+        "loc_mx_juarez"
+      ],
+      "typologies": [
+        "sex_trafficking_risk",
+        "labor_trafficking_risk",
+        "child_exploitation_risk"
+      ],
+      "intensity": 0.85,
+      "known_involvement": "confirmed_high",
+      "signals": [
+        "migrant_bottleneck",
+        "multi_national_flows",
+        "transit_predation"
+      ],
+      "literature_tags": [
+        "IOM_central_america"
+      ]
+    },
+    {
+      "id": "cor_ro_eu_sex",
+      "name": "Romania \u2192 Western EU sex/labor markets",
+      "origin": "loc_ro_bucharest",
+      "destination": "loc_de_berlin",
+      "via": [],
+      "typologies": [
+        "sex_trafficking_risk",
+        "labor_trafficking_risk"
+      ],
+      "intensity": 0.8,
+      "known_involvement": "confirmed_high",
+      "signals": [
+        "eu_free_movement_abuse",
+        "lover_boy_recruitment_patterns"
+      ],
+      "literature_tags": [
+        "TIP_romania",
+        "EU_reporting"
+      ]
+    },
+    {
+      "id": "cor_al_eu",
+      "name": "Albania \u2192 EU demand markets",
+      "origin": "loc_al_tirana",
+      "destination": "loc_de_berlin",
+      "via": [
+        "loc_it_sicily"
+      ],
+      "typologies": [
+        "sex_trafficking_risk",
+        "labor_trafficking_risk"
+      ],
+      "intensity": 0.82,
+      "known_involvement": "confirmed_high",
+      "signals": [
+        "se_europe_origin",
+        "eu_destination"
+      ],
+      "literature_tags": [
+        "TIP_albania"
+      ]
+    },
+    {
+      "id": "cor_tijuana_us",
+      "name": "Tijuana border complex \u2194 US",
+      "origin": "loc_mx_tijuana",
+      "destination": "loc_us_houston",
+      "via": [],
+      "typologies": [
+        "sex_trafficking_risk",
+        "labor_trafficking_risk"
+      ],
+      "intensity": 0.84,
+      "known_involvement": "confirmed_high",
+      "signals": [
+        "border_commercial_sex",
+        "cross_border_demand"
+      ],
+      "literature_tags": [
+        "TIP_mexico",
+        "TIP_usa"
+      ]
+    },
+    {
+      "id": "cor_bd_doha",
+      "name": "South Asia labor \u2192 Qatar",
+      "origin": "loc_bd_dhaka",
+      "destination": "loc_qa_doha",
+      "via": [],
+      "typologies": [
+        "labor_trafficking_risk",
+        "debt_bondage_risk"
+      ],
+      "intensity": 0.8,
+      "known_involvement": "confirmed_high",
+      "signals": [
+        "recruitment_fees",
+        "sponsorship_dependency"
+      ],
+      "literature_tags": [
+        "TIP_qatar",
+        "TIP_bangladesh"
+      ]
+    }
+  ]
+}

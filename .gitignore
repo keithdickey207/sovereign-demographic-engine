@@ -1,0 +1,34 @@
+# Dependencies & build
+node_modules/
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+
+# Secrets & local state
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+token.json
+
+# Logs & runtime
+*.log
+.DS_Store
+logs/
+.earth-pids
+cache/
+tile-cache/
+data/*.bsp
+*.gguf
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
