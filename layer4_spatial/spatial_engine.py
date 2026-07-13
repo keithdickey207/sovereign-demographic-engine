@@ -2,7 +2,7 @@
 """
 Sovereign Spatial Engine — custom, local-only agent kinematics.
 
-No Godot. No Unity. No commercial game runtime. No cloud render pipeline.
+No third-party game engines. No Unity. No commercial game runtime. No cloud render pipeline.
 Gravity-model migration math, capital pulses, and world projection all execute
 on this host so the simulation surface never leaves the machine.
 

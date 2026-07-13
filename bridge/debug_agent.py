@@ -332,13 +332,13 @@ class DebugAgent:
             if not doc.exists():
                 continue
             text = doc.read_text(encoding="utf-8", errors="replace").lower()
-            if "godot" in text and "no godot" not in text and "not use godot" not in text:
-                # README intentionally says no Godot — only flag if it recommends Godot
-                if "requires godot" in text or "install godot" in text:
+            if "spatial" in text and "no spatial" not in text and "not use spatial" not in text:
+                # README intentionally says no third-party game engines — only flag if it recommends the spatial engine
+                if "requires spatial" in text or "install spatial" in text:
                     self._add(
-                        "doc_godot_dep",
+                        "doc_third_party_engine_dep",
                         "warn",
-                        f"{doc.name} may still depend on Godot wording",
+                        f"{doc.name} may still recommend a third-party engine",
                         fixable=True,
                     )
 
@@ -548,7 +548,7 @@ class DebugAgent:
             "",
             "## Stack rules",
             "",
-            "- Custom spatial only (`sovereign-spatial`) — no Godot/Unity/Unreal",
+            "- Custom spatial only (`sovereign-spatial`) — no third-party game engines/Unity/Unreal",
             "- Pattern memory in `state/pattern_memory.json` evolves across runs",
             "- Debug report: `state/debug_report.json`",
             "",

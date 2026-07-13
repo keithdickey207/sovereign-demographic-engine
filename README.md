@@ -6,7 +6,7 @@ Four-layer demographic / migration simulation. Entity resolution, graph storage,
 behavioral inference, spatial kinematics, **online pattern memory**, and a
 **debug agent** all run on your machine.
 
-**Spatial layer is a custom engine (`sovereign-spatial`). We do not use Godot,
+**Spatial layer is a custom engine (`sovereign-spatial`). We do not use third-party game engines,
 Unity, Unreal, or any commercial game stack.**
 
 ## One-command prototype

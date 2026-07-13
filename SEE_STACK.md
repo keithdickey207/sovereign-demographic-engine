@@ -13,10 +13,10 @@
 | Inference + patterns | `layer3_inference/decision_daemon.py` |
 | Pattern memory | `bridge/pattern_memory.py` → `state/pattern_memory.json` |
 | Debug agent | `bridge/debug_agent.py` → `state/debug_report.json` |
-| Spatial (custom, no Godot) | `layer4_spatial/spatial_engine.py` |
+| Spatial (custom, no third-party game engines) | `layer4_spatial/spatial_engine.py` |
 | Prototype runner | `scripts/prototype.py` |
 | Private viewport | `layer4_spatial/private_viewport.py` |
 
-**Explicit non-deps:** Godot · Unity · Unreal · cloud graph SaaS · cloud LLM APIs
+**Explicit non-deps:** the spatial engine · Unity · Unreal · cloud graph SaaS · cloud LLM APIs
 
 **Prototype:** `python scripts/prototype.py` or `./scripts/run_local.sh proto`  

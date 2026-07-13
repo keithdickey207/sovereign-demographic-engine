@@ -6,7 +6,7 @@ Polls agent state from the graph, asks the local LLM for a JSON decision
 each simulation tick (with pattern-memory prior / offline fallback), and
 publishes decisions for the custom sovereign spatial engine.
 
-No Godot. No cloud LLM required — Ollama optional; pattern memory always on.
+No third-party game engines. No cloud LLM required — Ollama optional; pattern memory always on.
 """
 
 from __future__ import annotations
@@ -33,6 +33,19 @@ from bridge.pattern_memory import get_memory  # noqa: E402
 OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://localhost:11434/api/generate")
 # Prefer models actually present on this host
 DEFAULT_MODEL = os.environ.get("OLLAMA_MODEL", "llama3.2")
+
+# Sovereign unified LLM client v6.1
+_LLM = None
+try:
+    _earth = Path.home() / "projects" / "sovereign-earth"
+    if str(_earth) not in sys.path:
+        sys.path.insert(0, str(_earth))
+    from llm_client import generate as _llm_generate, resolve_model as _llm_resolve  # type: ignore
+    _LLM = {"generate": _llm_generate, "resolve": _llm_resolve}
+    DEFAULT_MODEL = _llm_resolve("demographic", preferred=DEFAULT_MODEL)
+except Exception:
+    _LLM = None
+
 STATE_DIR = ROOT / "state"
 DECISIONS_PATH = STATE_DIR / "tick_decisions.json"
 API_HOST = os.environ.get("DEMOGRAPHIC_API_HOST", "127.0.0.1")
@@ -105,41 +118,55 @@ Return ONLY a JSON object with two keys:
 
     decision: dict[str, Any] | None = None
     if use_ollama:
-        payload = {
-            "model": model,
-            "prompt": prompt,
-            "format": "json",
-            "stream": False,
-            "options": {"temperature": 0.25},
-        }
-        try:
-            response = requests.post(OLLAMA_URL, json=payload, timeout=8)
-            response.raise_for_status()
-            body = response.json()
-            raw = body.get("response", "{}")
-            parsed = json.loads(raw) if isinstance(raw, str) else raw
-            action = str(parsed.get("action", "STAY")).upper()
-            if action not in ("MIGRATE", "STAY", "TRANSFER_CAPITAL"):
-                action = "STAY"
-            confidence = float(parsed.get("confidence", 0.5))
-            confidence = max(0.0, min(1.0, confidence))
-            # Blend LLM with pattern prior (30% memory) so learning sticks
-            if action == prior["action"]:
-                confidence = max(confidence, 0.5 * confidence + 0.5 * float(prior["confidence"]))
-            else:
-                # soft pull toward prior when LLM is low-confidence
-                if confidence < 0.55:
-                    action = prior["action"]
-                    confidence = float(prior["confidence"])
-            decision = {
-                "action": action,
-                "confidence": round(confidence, 4),
-                "source": "ollama+pattern",
-                "pattern_bucket": prior.get("pattern_bucket"),
-                "gravity_p": prior.get("gravity_p"),
+        parsed = None
+        if _LLM is not None:
+            try:
+                res = _LLM["generate"](prompt, role="demographic", model=model)
+                if res.get("ok") and res.get("text"):
+                    raw = res["text"]
+                    parsed = json.loads(raw) if isinstance(raw, str) else raw
+            except (json.JSONDecodeError, TypeError, ValueError):
+                parsed = None
+        if parsed is None:
+            payload = {
+                "model": model,
+                "prompt": prompt,
+                "format": "json",
+                "stream": False,
+                "options": {"temperature": 0.25},
             }
-        except (requests.exceptions.RequestException, json.JSONDecodeError, TypeError, ValueError):
-            decision = None
+            try:
+                response = requests.post(OLLAMA_URL, json=payload, timeout=8)
+                response.raise_for_status()
+                body = response.json()
+                raw = body.get("response", "{}")
+                parsed = json.loads(raw) if isinstance(raw, str) else raw
+            except (requests.exceptions.RequestException, json.JSONDecodeError, TypeError, ValueError):
+                parsed = None
+        if parsed is not None:
+            try:
+                action = str(parsed.get("action", "STAY")).upper()
+                if action not in ("MIGRATE", "STAY", "TRANSFER_CAPITAL"):
+                    action = "STAY"
+                confidence = float(parsed.get("confidence", 0.5))
+                confidence = max(0.0, min(1.0, confidence))
+                # Blend LLM with pattern prior so learning sticks
+                if action == prior["action"]:
+                    confidence = max(confidence, 0.5 * confidence + 0.5 * float(prior["confidence"]))
+                else:
+                    if confidence < 0.55:
+                        action = prior["action"]
+                        confidence = float(prior["confidence"])
+                decision = {
+                    "action": action,
+                    "confidence": round(confidence, 4),
+                    "source": "ollama+pattern",
+                    "pattern_bucket": prior.get("pattern_bucket"),
+                    "gravity_p": prior.get("gravity_p"),
+                    "llm_version": "6.1",
+                }
+            except (TypeError, ValueError):
+                decision = None
 
     if decision is None:
         decision = {

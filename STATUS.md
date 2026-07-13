@@ -39,6 +39,6 @@ python layer4_spatial/spatial_engine.py --proto --no-api
 
 ## Stack rules
 
-- Custom spatial only (`sovereign-spatial`) — no Godot/Unity/Unreal
+- Custom spatial only (`sovereign-spatial`) — no third-party game engines/Unity/Unreal
 - Pattern memory in `state/pattern_memory.json` evolves across runs
 - Debug report: `state/debug_report.json`
